@@ -38,13 +38,13 @@ export default function DashboardLayout() {
     "Collector";
 
   return (
-    <div>
+    <div className="w-full mx-auto flex flex-col justify-center">
       {/* Header Action Section */}
-      <div className="flex justify-between items-center border-b pb-4 mb-4">
+      <div className="flex justify-between items-center border-b p-4 md:p-9 md:pt-0 w-full">
         <span className="text-sm text-muted-foreground">Hi, {displayUserText}!</span>
         <div>
           <DropdownMenu>
-            <DropdownMenuTrigger  asChild><Menu/></DropdownMenuTrigger>
+            <DropdownMenuTrigger  asChild><Menu className="cursor-pointer hover:opacity-70"/></DropdownMenuTrigger>
             <DropdownMenuContent align="end">
                 <DropdownMenuItem className="text-xs h-8 px-3 rounded-lg bg-primary w-full text-center">
 

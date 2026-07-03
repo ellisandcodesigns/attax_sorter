@@ -11,7 +11,7 @@ export const GlobalProgress = () => {
   const { ownedCount, totalCards, completion, duplicateCount } = useCollection();
   
   return (
-    <div className="bg-linear-to-b from-[#1B9D80] to-[#173F38] p-1 rounded-md shadow-lg w-full max-w-3xl">
+    <div className="bg-linear-to-b from-[#1B9D80] to-[#173F38] p-1 rounded-md shadow-lg w-full max-w-3xl mx-auto">
       <MediumCard classes="bg-gradient-to-b from-[#16433B] via-[#172F2C] to-[#132624] w-full flex flex-col justify-center p-5 gap-10 rounded-md">
         <p className='p-2 py-4 text-lg text-foreground/60 font-semibold'>Match Attax 2025 / 2026</p>
         <CardHeader className="px-2 pt-5 pb-2 flex justify-between items-center border-none">

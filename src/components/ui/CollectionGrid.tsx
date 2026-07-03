@@ -185,7 +185,7 @@ const CollectionGrid = () => {
             )
         ) : activeGroup ? (
             /* 📂 UI STATE 2: Opened Group/Folder View */
-            <div className="place-items-center grid grid-cols-2 sm:grid-cols-3 gap-4 animate-in zoom-in-95 duration-200">
+            <div className="place-items-center grid grid-cols-2 sm:grid-cols-3 sm:justify-center sm:items-center gap-4 animate-in zoom-in-95 duration-200">
                 {(nestedGroupedCards[activeGroup.subset]?.[activeGroup.name] || []).map((card) => (
                     <CardTile
                         key={card.uid}

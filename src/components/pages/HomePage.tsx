@@ -13,14 +13,12 @@ export default function HomePage() {
     const matchAttax = myCollections[0];
 
     return (
-        <div className="mt-10">
+        <div className="mt-10 w-full flex flex-col">
             {!isCollectionsOpen ? (
-                    <div className="flex flex-col gap-8 p-8">
 
-                        <div className="w-full max-w-5xl cursor-pointer active:opacity-60 hover:opacity-80" onClick={() => setIsCollectionsOpen(true)}>
+                        <div className="w-full mx-auto max-w-5xl p-4 md:p-8 cursor-pointer active:opacity-60 hover:opacity-80" onClick={() => setIsCollectionsOpen(true)}>
                             <GlobalProgress />
                         </div>
-                    </div>
             ) : ( 
                 /* 🗺️ VIEW 2: The Core Card Grids */
                 <div className="px-8 space-y-4">
