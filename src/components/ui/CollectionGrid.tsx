@@ -26,10 +26,15 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 
+interface collectionProp {
+    card: FlatCard;
+}
 
-const CollectionGrid = () => {
+
+const CollectionGrid = ({card}: collectionProp) => {
   const { hasCard, getCardCount, allCards, addCard } = useCollection();
   const { filteredCards, query, setQuery, setCollectionFilter, collectionFilter } = useCardSearch();
+  
 
   // 📂 Folders tracking state
   const [activeGroup, setActiveGroup] = useState<{ subset: string; name: string } | null>(null);
@@ -230,7 +235,7 @@ const CollectionGrid = () => {
                                             <div className="w-14 h-14 flex items-center justify-center relative bg-muted/30 rounded-lg p-1.5 border border-border/60 group-hover:scale-105 transition-transform duration-200">
                                                 {cardsArray[0]?.clubLogo ? (
                                                     <Image
-                                                        src={cardsArray[0].clubLogo} 
+                                                        src={cardsArray[0]?.clubLogo} 
                                                         alt={groupName} 
                                                         width={45} 
                                                         height={45}

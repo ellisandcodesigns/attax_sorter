@@ -79,7 +79,7 @@ const CardTile = ({ card, owned, duplicates, onClick }: CardTileProps) => {
       onPointerLeave={clearHold}
       onPointerCancel={clearHold}
       className={cn(
-        "w-full h-70 p-4 rounded-xl flex flex-col justify-between relative cursor-pointer transition-transform",
+        "w-full h-70 p-4 rounded-xl flex flex-col justify-evenly relative cursor-pointer transition-transform",
         longHold && "ring-2 ring-red-500",
         owned ? "border border-primary" : "bg-card border border-border"
       )}
@@ -87,8 +87,8 @@ const CardTile = ({ card, owned, duplicates, onClick }: CardTileProps) => {
       {/* Top Bar: Badge ID and Owned Indicator */}
       <div className="z-10 flex w-full p-1 justify-between">
         <Badge 
-          variant="secondary" 
-          className={owned ? "bg-accent border-emerald-800" : "bg-accent border-neutral-800"}
+          variant="default" 
+          className={owned ? "text-foreground bg-primary/60 border-emerald-800" : "text-foreground bg-secondary border-neutral-800"}
         >
           {card.club ? `${card.club.substring(0, 3)}-` : "CARD-"}{card.card_number ?? "??"}
         </Badge>
@@ -100,19 +100,21 @@ const CardTile = ({ card, owned, duplicates, onClick }: CardTileProps) => {
         )}
       </div>
 
-        {hasValidLogo ? (
-          <Image
-            src={card.clubLogo} 
-            alt=""
-            className={`absolute! p-10 inset-0 image-touch w-full h-full ${card.club === "Tottenham Hotspur" ? "opacity-60 mix-blend-color" : "opacity-25"}`}
-            fill
-            unoptimized
-          />
-        ) : (
-          <span className="text-4xl font-bold tracking-tighter select-none font-sans text-center opacity-5">
-            {card.card_number}
-          </span>
-        )}
+        <div className="relative w-full h-full">
+          {hasValidLogo ? (
+            <Image
+              src={card.clubLogo}
+              alt=""
+              className={`absolute! max-w-3/4 mx-auto inset-0 image-touch w-full h-full ${owned ? "opacity-70": "opacity-30"}`}
+              fill
+              unoptimized
+            />
+          ) : (
+            <span className="text-4xl font-bold tracking-tighter select-none font-sans text-center opacity-5">
+              {card.card_number}
+            </span>
+          )}
+        </div>
 
       {/* Bottom Text Area */}
       <div className="z-10 w-full mt-auto space-y-0.5 p-1 mb-2">
