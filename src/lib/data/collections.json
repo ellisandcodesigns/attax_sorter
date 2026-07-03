@@ -1,0 +1,14 @@
+{
+    "collections": [
+        {
+            "id": 1,
+            "name": "Match Attax 2025 / 2026",
+            "collection": "./cards.json"
+        },
+        {
+            "id": 2,
+            "name": "Match Attax Extras 2025 / 2026",
+            "collection": null
+        }
+    ]
+}

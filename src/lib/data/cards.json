@@ -1,0 +1,3975 @@
+{
+    "collection": "Match Attax 25/26",
+    "groups": [
+        {
+            "group_name": "Tottenham Hotspur",
+            "subset": "Base Cards",
+            "logo": "https://cdn.prod.website-files.com/68f550992570ca0322737dc2/6a178f5bd2fd6310dfe29844_68f58ad6ad88bd62cc1e7dfa_tottenham-hotspur-footballlogos-org.webp",
+            "cards": [
+                {
+                "id": 1 ,
+                "name": "Team Badge",
+                "card_number": 1
+                },
+                {
+                "id": 2,
+                "name":  "Guglielmo Vicario",
+                "card_number": 2
+                },
+                {
+                "id": 3,
+                "name": "Micky van de Ven",
+                "card_number": 3
+                },
+                {
+                "id": 4,
+                "name": "Cristian Romero",
+                "card_number": 4
+                },
+                {
+                "id": 5,
+                "name": "Destiny Udogie",
+                "card_number": 5
+                },
+                {
+                "id": 6,
+                "name": "James Maddison",
+                "card_number": 6
+                },
+                {
+                "id": 7,
+                "name": "Son Heung-Min",
+                "leader": true,
+                "card_number": 7
+                },
+                {
+                "id": 8,
+                "name": "Brennan Johnson",
+                "card_number": 8
+
+                },
+                {
+                "id": 9,
+                "name": "Dominic Solanke",
+                "card_number": 9
+                }
+            ]
+        },
+        {
+            "group_name": "Liverpool",
+            "subset": "Base Cards",
+            "logo": "https://cdn.sanity.io/images/11hmdf08/production/735455c696d234ba62418562f5a522e4279dfe40-800x800.png?w=800&fm=webp&q=80",
+            "cards": [
+                {
+                "id": 1,
+                "name": "Team Badge",
+                "card_number": 10
+                },
+                {
+                "id": 2,
+                "name": "Alisson Becker",
+                "card_number": 11
+                },
+                {
+                "id": 3,
+                "name": "Virgil van Dijk",
+                "leader": true,
+                "card_number": 12
+                },
+                {
+                "id": 4,
+                "name": "Ibrahima Konaté",
+                "card_number": 13
+                },
+                {
+                "id": 5,
+                "name": "Jeremie Frimpong",
+                "card_number": 14
+                },
+                {
+                "id": 6,
+                "name": "Andy Robertson",
+                "card_number": 15
+                },
+                {
+                "id": 7,
+                "name": "Milos Kerkez",
+                "card_number": 16
+                },
+                {
+                "id": 8,
+                "name": "Conor Bradley",
+                "card_number": 17
+                },
+                {
+                "id": 9,
+                "name": "Joe Gomez",
+                "card_number": 18
+                },
+                {
+                "id": 10,
+                "name": "Dominik Szoboszlai",
+                "card_number": 19
+                },
+                {
+                "id": 11,
+                "name": "Alexis Mac Allister",
+                "card_number": 20
+                },
+                {
+                "id": 12,
+                "name": "Ryan Gravenberch",
+                "card_number": 21
+                },
+                {
+                "id": 13,
+                "name": "Florian Wirtz",
+                "card_number": 22
+                },
+                {
+                "id": 14,
+                "name": "Curtis Jones",
+                "card_number": 23
+                },
+                {
+                "id": 15,
+                "name": "Wataru Endo",
+                "card_number": 24
+                },
+                {
+                "id": 16,
+                "name": "Luis Díaz",
+                "card_number": 25
+                },
+                {
+                "id": 17,
+                "name": "Mohamed Salah",
+                "card_number": 26
+                },
+                {
+                "id": 18,
+                "name": "Cody Gakpo",
+                "card_number": 27
+                }
+            ]
+        },
+        {
+            "group_name": "Arsenal",
+            "subset": "Base Cards",
+            "logo": "https://cdn.prod.website-files.com/68f550992570ca0322737dc2/6a178ec82da16e223f7547fd_68f587d4b29d49b3350c891b_arsenal-footballlogos-org.webp",
+            "cards": [
+                {
+                "id": 1,
+                "name": "Team Badge",
+                "card_number": 28
+                },
+                {
+                "id": 2,
+                "name": "David Raya",
+                "card_number": 29
+                },
+                {
+                "id": 3,
+                "name": "William Saliba",
+                "card_number": 30
+                },
+                {
+                "id": 4,
+                "name": "Ben White",
+                "card_number": 31
+                },
+                {
+                "id": 5,
+                "name": "Gabriel",
+                "card_number": 32
+                },
+                {
+                "id": 6,
+                "name": "Riccardo Calafiori",
+                "card_number": 33
+                },
+                {
+                "id": 7,
+                "name": "Jurriën Timber",
+                "card_number": 34
+                },
+                {
+                "id": 8,
+                "name": "Myles Lewis-Skelly",
+                "card_number": 35
+                },
+                {
+                "id": 9,
+                "name": "Martín Zubimendi",
+                "card_number": 36
+                },
+                {
+                "id": 10,
+                "name": "Martin Ødegaard",
+                "leader": true,
+                "card_number": 37
+                },
+                {
+                "id": 11,
+                "name": "Declan Rice",
+                "card_number": 38
+                },
+                {
+                "id": 12,
+                "name": "Mikel Merino",
+                "card_number": 39
+                },
+                {
+                "id": 13,
+                "name": "Ethan Nwaneri",
+                "card_number": 40
+                },
+                {
+                "id": 14,
+                "name": "Kai Havertz",
+                "card_number": 41
+                },
+                {
+                "id": 15,
+                "name": "Bukayo Saka",
+                "card_number": 42
+                },
+                {
+                "id": 16,
+                "name": "Leandro Trossard",
+                "card_number": 43
+                },
+                {
+                "id": 17,
+                "name": "Gabriel Martinelli",
+                "card_number": 44
+                },
+                {
+                "id": 18,
+                "name": "Noni Madueke",
+                "card_number": 45
+                }
+            ]
+        },
+        {
+            "group_name": "Manchester City",
+            "subset": "Base Cards",
+            "logo": "https://cdn.prod.website-files.com/68f550992570ca0322737dc2/6a178f1d8d373abfdd66b82c_68f589f820f16768d7c38be2_manchester-city-footballlogos-org.webp",
+            "cards": [
+                {
+                "id": 1,
+                "name": "Team Badge",
+                "card_number": 46
+                },
+                {
+                "id": 2,
+                "name": "Ederson",
+                "card_number": 47
+                },
+                {
+                "id": 3,
+                "name": "Rúben Dias",
+                "card_number": 48
+                },
+                {
+                "id": 4,
+                "name": "John Stones",
+                "card_number": 49
+                },
+                {
+                "id": 5,
+                "name": "Joško Gvardiol",
+                "card_number": 50
+                },
+                {
+                "id": 6,
+                "name": "Manuel Akanji",
+                "card_number": 51
+                },
+                {
+                "id": 7,
+                "name": "Nathan Aké",
+                "card_number": 52
+                },
+                {
+                "id": 8,
+                "name": "Abdukodir Khusanov",
+                "card_number": 53
+                },
+                {
+                "id": 9,
+                "name": "Vitor Reis",
+                "card_number": 54
+                },
+                {
+                "id": 10,
+                "name": "Bernardo Silva",
+                "card_number": 55
+                },
+                {
+                "id": 11,
+                "name": "Claudio Echeverri",
+                "card_number": 56
+                },
+                {
+                "id": 12,
+                "name": "Phil Foden",
+                "card_number": 57
+                },
+                {
+                "id": 13,
+                "name": "Rodri",
+                "card_number": 58
+                },
+                {
+                "id": 14,
+                "name": "Nico González",
+                "card_number": 59
+                },
+                {
+                "id": 15,
+                "name": "Jérémy Doku",
+                "card_number": 60
+                },
+                {
+                "id": 16,
+                "name": "Sávio",
+                "card_number": 61
+                },
+                {
+                "id": 17,
+                "name": "Omar Marmoush",
+                "card_number": 62
+                },
+                {
+                "id": 18,
+                "name": "Erling Haaland",
+                "card_number": 63
+                }
+            ]
+        },
+        {
+          "group_name": "Chelsea FC",
+          "subset": "Base Cards",
+          "logo": "https://cdn.prod.website-files.com/68f550992570ca0322737dc2/6a178ee48d373abfdd66b306_68f588e4cced4a41f8dfd248_chelsea-footballlogos-org.webp",
+          "cards": [
+            {
+              "id": 1,
+              "name": "Team Badge",
+              "card_number": 64
+            },
+            {
+              "id": 2,
+              "name": "Robert Sanchez",
+              "card_number": 65
+            },
+            {
+              "id": 3,
+              "name": "Reece James",
+              "leader": true,
+              "card_number": 66
+            },
+            {
+              "id": 4,
+              "name": "Tosin Adarabioyo",
+              "card_number": 67
+            },
+            {
+              "id": 5,
+              "name": "Enzo Fernández",
+              "card_number": 68
+            },
+            {
+              "id": 6,
+              "name": "Moisés Caicedo",
+              "card_number": 69
+            },
+            {
+              "id": 7,
+              "name": "Estêvão",
+              "card_number": 70
+            },
+            {
+              "id": 8,
+              "name": "Liam Delap",
+              "card_number": 71
+            },
+            {
+              "id": 9,
+              "name": "Cole Palmer",
+              "card_number": 72
+            }
+          ]
+        },
+        {
+          "group_name": "Newcastle United",
+          "subset": "Base Cards",
+          "logo": "https://cdn.prod.website-files.com/68f550992570ca0322737dc2/6a178f27566fbd119b77ad29_68f58a3f5c91d9f5a918ce5a_england_newcastle_1500x1500.webp",
+          "cards": [
+            {
+              "id": 1,
+              "name": "Team Badge",
+              "card_number": 73
+            },
+            {
+              "id": 2,
+              "name": "Nick Pope",
+              "card_number": 74
+            },
+            {
+              "id": 3,
+              "name": "Lewis Hall",
+              "card_number": 75
+            },
+            {
+              "id": 4,
+              "name": "Dan Burn",
+              "card_number": 76
+            },
+            {
+              "id": 5,
+              "name": "Bruno Guimaraes",
+              "leader": true,
+              "card_number": 77
+            },
+            {
+              "id": 6,
+              "name": "Sandro Tonali",
+              "card_number": 78
+            },
+            {
+              "id": 7,
+              "name": "Joelinton",
+              "card_number": 79
+            },
+            {
+              "id": 8,
+              "name": "Alexander Isak",
+              "card_number": 80
+            },
+            {
+              "id": 9,
+              "name": "Anthony Gordon",
+              "card_number": 81
+            }
+          ]
+        },
+        {
+          "group_name": "Aston Villa",
+          "subset": "Base Cards",
+          "logo": "https://cdn.prod.website-files.com/68f550992570ca0322737dc2/68f5871564515d34fc6e69f4_aston-villa-footballlogos-org.svg",
+          "cards": [
+            {
+              "id": 1,
+              "name": "Team Badge",
+              "card_number": 82
+            },
+            {
+              "id": 2,
+              "name": "Emiliano Martínez",
+              "card_number": 83
+            },
+            {
+              "id": 3,
+              "name": "Ezri Konsa",
+              "card_number": 84
+            },
+            {
+              "id": 4,
+              "name": "Pau Torres",
+              "card_number": 85
+            },
+            {
+              "id": 5,
+              "name": "John McGinn",
+              "leader": true,
+              "card_number": 86
+            },
+            {
+              "id": 6,
+              "name": "Youri Tielemans",
+              "card_number": 87
+            },
+            {
+              "id": 7,
+              "name": "Morgan Rogers",
+              "card_number": 88
+            },
+            {
+              "id": 8,
+              "name": "Ollie Watkins",
+              "card_number": 89
+            },
+            {
+              "id": 9,
+              "name": "Donyell Malen",
+              "card_number": 90
+            }
+          ]
+        },
+        {
+          "group_name": "Nottingham Forest",
+          "subset": "Base Cards",
+          "logo": "https://cdn.prod.website-files.com/68f550992570ca0322737dc2/6a178f2aaa3f837f06d145e9_68f58a7aa0f964641d5abfaf_nottingham-forest-footballlogos-org.webp",
+          "cards": [
+            {
+              "id": 1,
+              "name": "Team Badge",
+              "card_number": 91
+            },
+            {
+              "id": 2,
+              "name": "Matz Sels",
+              "card_number": 92
+            },
+            {
+              "id": 3,
+              "name": "Nikola Milenkovic",
+              "card_number": 93
+            },
+            {
+              "id": 4,
+              "name": "Murillo",
+              "card_number": 94
+            },
+            {
+              "id": 5,
+              "name": "Ola Aina",
+              "card_number": 95
+            },
+            {
+              "id": 6,
+              "name": "Morgan Gibbs-White",
+              "card_number": 96
+            },
+            {
+              "id": 7,
+              "name": "Ryan Yates",
+              "leader": true,
+              "card_number": 97
+            },
+            {
+              "id": 8,
+              "name": "Chris Wood",
+              "card_number": 98
+            },
+            {
+              "id": 9,
+              "name": "Callum Hudson-Odoi",
+              "card_number": 99
+            }
+          ] 
+        },
+        {
+          "group_name": "FC Barcelona",
+          "subset": "Base Cards",
+          "logo": "https://cdn.prod.website-files.com/68f550992570ca0322737dc2/6a2dabef6002e4fd2eefe0d1_6a2778f4e987d98a27cb54d3_fc-barcelona-footylogos.webp",
+          "cards": [
+            {
+              "id": 1,
+              "name": "Team Badge",
+              "card_number": 100
+            },
+            {
+              "id": 2,
+              "name": "Inigo Martinez",
+              "card_number": 101
+            },
+            {
+              "id": 3,
+              "name": "Ronald Araújo",
+              "card_number": 102
+            },
+            {
+              "id": 4,
+              "name": "Jules Koundé",
+              "card_number": 103
+            },
+            {
+              "id": 5,
+              "name": "Pau Cubarsi",
+              "card_number": 104
+            },
+            {
+              "id": 6,
+              "name": "Alejandro Balde",
+              "card_number": 105
+            },
+            {
+              "id": 7,
+              "name": "Marc Bernal",
+              "card_number": 106
+            },
+            {
+              "id": 8,
+              "name": "Frenkie de Jong",
+              "leader": true,
+              "card_number": 107
+            },
+            {
+              "id": 9,
+              "name": "Fermín López",
+              "card_number": 108
+            },
+            {
+              "id": 10,
+              "name": "Pedri",
+              "card_number": 109
+            },
+            {
+              "id": 11,
+              "name": "Gavi",
+              "card_number": 110
+            },
+            {
+              "id": 12,
+              "name": "Marc Casado",
+              "card_number": 111
+            },
+            {
+              "id": 13,
+              "name": "Dani Olmo",
+              "card_number": 112
+            },
+            {
+              "id": 14,
+              "name": "Lamine Yamal",
+              "card_number": 113
+            },
+            {
+              "id": 15,
+              "name": "Robert Lewandowski",
+              "card_number": 114
+            },
+            {
+              "id": 16,
+              "name": "Ferran Torres",
+              "card_number": 115
+            },
+            {
+              "id": 17,
+              "name": "Pau Víctor",
+              "card_number": 116
+            },
+            {
+              "id": 18,
+              "name": "Raphinha",
+              "card_number": 117
+            }
+          ]
+        },
+        {
+          "group_name": "Real Madrid C.F.",
+          "subset": "Base Cards",
+          "logo": "https://cdn.prod.website-files.com/68f550992570ca0322737dc2/6a2dac1f7b5b0788752f5fbb_68f556587d8c261145a647f7_real-madrid-footballlogos-org.webp",
+          "cards": [
+            {
+              "id": 1,
+              "name": "Team Badge",
+              "card_number": 118
+            },
+            {
+              "id": 2,
+              "name": "Thibaut Courtois",
+              "card_number": 119
+            },
+            {
+              "id": 3,
+              "name": "Antonio Rüdiger",
+              "card_number": 120
+            },
+            {
+              "id": 4,
+              "name": "Éder Militão",
+              "card_number": 121
+            },
+            {
+              "id": 5,
+              "name": "Daniel Carvajal",
+              "card_number": 122
+            },
+            {
+              "id": 6,
+              "name": "Trent Alexander-Arnold",
+              "card_number": 123
+            },
+            {
+              "id": 7,
+              "name": "Ferland Mendy",
+              "card_number": 124
+            },
+            {
+              "id": 8,
+              "name": "Dean Huijsen",
+              "card_number": 125
+            },
+            {
+              "id": 9,
+              "name": "David Alaba",
+              "card_number": 126
+            },
+            {
+              "id": 10,
+              "name": "Aurélien Tchouameni",
+              "card_number": 127
+            },
+            {
+              "id": 11,
+              "name": "Eduardo Camavinga",
+              "card_number": 128
+            },
+            {
+              "id": 12,
+              "name": "Federico Valverde",
+              "card_number": 129
+            },
+            {
+              "id": 13,
+              "name": "Jude Bellingham",
+              "card_number": 130
+            },
+            {
+              "id": 14,
+              "name": "Arda Güler",
+              "card_number": 131
+            },
+            {
+              "id": 15,
+              "name": "Kylian Mbappé",
+              "card_number": 132
+            },
+            {
+              "id": 16,
+              "name": "Rodrygo",
+              "card_number": 133
+            },
+            {
+              "id": 17,
+              "name": "Endrick",
+              "card_number": 134
+            },
+            {
+              "id": 18,
+              "name": "Vini Jr.",
+              "card_number": 135
+            }
+          ]
+        },
+        {
+          "group_name": "Atlético de Madrid",
+          "subset": "Base Cards",
+          "logo": "https://cdn.prod.website-files.com/68f550992570ca0322737dc2/6a2dabd10d1b3a11100dcb09_68f57ae622e0827f30d03d63_atletico-madrid-footballlogos-org.webp",
+          "cards": [
+            {
+              "id": 1,
+              "name": "Team Badge",
+              "card_number": 136
+            },
+            {
+              "id": 2,
+              "name": "Jan Oblak",
+              "card_number": 137
+            },
+            {
+              "id": 3,
+              "name": "José María Giménez",
+              "card_number": 138
+            },
+            {
+              "id": 4,
+              "name": "Koke",
+              "leader": true,
+              "card_number": 139
+            },
+            {
+              "id": 5,
+              "name": "Conor Gallagher",
+              "card_number": 140
+            },
+            {
+              "id": 6,
+              "name": "Pablo Barrios",
+              "card_number": 141
+            },
+            {
+              "id": 7,
+              "name": "Marcos Llorente",
+              "card_number": 142
+            },
+            {
+              "id": 8,
+              "name": "Antoine Griezmann",
+              "card_number": 143
+            },
+            {
+              "id": 9,
+              "name": "Julián Álvarez",
+              "card_number": 144
+            }
+          ]
+        },
+        {
+          "group_name": "VfB Stuttgart",
+          "subset":"Base Cards",
+          "logo": "https://cdn.prod.website-files.com/68f550992570ca0322737dc2/6a178f61070156fbb28bbc06_68f593bc83f453d8fa1cb870_vfb-stuttgart-footballlogos-org.webp",
+          "cards": [
+            {
+              "id": 1,
+              "name": "Team Badge",
+              "card_number": 145
+            },
+            {
+              "id": 2,
+              "name": "Alexander Nübel",
+              "card_number": 146
+            },
+            {
+              "id": 3,
+              "name": "Josha Vagnoman",
+              "card_number": 147
+            },
+            {
+              "id": 4,
+              "name": "Maximilian Mittelstädt",
+              "card_number": 148
+            },
+            {
+              "id": 5,
+              "name": "Jeff Chabot",
+              "card_number": 149
+            },
+            {
+              "id": 6,
+              "name": "Atakan Karazor",
+              "leader": true,
+              "card_number": 150
+            },
+            {
+              "id": 7,
+              "name": "Angelo Stiller",
+              "card_number": 151
+            },
+            {
+              "id": 8,
+              "name": "Deniz Undav",
+              "card_number": 152
+            },
+            {
+              "id": 9,
+              "name": "Ermedin Demirović",
+              "card_number": 153
+            }
+          ]
+        },
+        {
+          "group_name": "FC Bayern München",
+          "subset": "Base Cards",
+          "logo": "https://cdn.prod.website-files.com/68f550992570ca0322737dc2/6a178ed1970a1f21ba7e65fa_68f5938f22e0827f30d2bdbb_bayern-munich-footballlogos-org.webp",
+          "cards": [
+            {
+              "id": 1,
+              "name": "Team Badge",
+              "card_number": 154
+            },
+            {
+              "id": 2,
+              "name": "Manuel Neuer",
+              "leader": true,
+              "card_number": 155
+            },
+            {
+              "id": 3,
+              "name": "Josip Stanišić",
+              "card_number": 156
+            },
+            {
+              "id": 4,
+              "name": "Kim Minjae",
+              "card_number": 157
+            },
+            {
+              "id": 5,
+              "name": "Alphonso Davies",
+              "card_number": 158
+            },
+            {
+              "id": 6,
+              "name": "Dayot Upamecano",
+              "card_number": 159
+            },
+            {
+              "id": 7,
+              "name": "Raphaël Guerreiro",
+              "card_number": 160
+            },
+            {
+              "id": 8,
+              "name": "Jonathan Tah",
+              "card_number": 161
+            },
+            {
+              "id": 9,
+              "name": "Hiroki Ito",
+              "card_number": 162
+            },
+            {
+              "id": 10,
+              "name": "Joshua Kimmich",
+              "card_number": 163
+            },
+            {
+              "id": 11,
+              "name": "João Palhinha",
+              "card_number": 164
+            },
+            {
+              "id": 12,
+              "name": "Konrad Laimer",
+              "card_number": 165
+            },
+            {
+              "id": 13,
+              "name": "Aleksandar Pavlović",
+              "card_number": 166
+            },
+            {
+              "id": 14,
+              "name": "Leon Goretzka",
+              "card_number": 167
+            },
+            {
+              "id": 15,
+              "name": "Michael Olise",
+              "card_number": 168
+            },
+            {
+              "id": 16,
+              "name": "Jamal Musiala",
+              "card_number": 169
+            },
+            {
+              "id": 17,
+              "name": "Serge Gnabry",
+              "card_number": 170
+            },
+            {
+              "id": 18,
+              "name": "Harry Kane",
+              "card_number": 171
+            }
+          ]
+        },
+        {
+          "group_name": "Bayer 04 Leverkusen",
+          "subset": "Base Cards",
+          "logo": "https://cdn.prod.website-files.com/68f550992570ca0322737dc2/6a178ed1c527a0f357c450e0_68f59363f8048e80334715fe_bayer-leverkusen-footballlogos-org.webp",
+          "cards": [
+            {
+              "id": 1,
+              "name": "Team Badge",
+              "card_number": 172
+            },
+            {
+              "id": 2,
+              "name": "Lukas Hradecky",
+              "leader": true,
+              "card_number": 173
+            },
+            {
+              "id": 3,
+              "name": "Alejandro Grimaldo",
+              "card_number": 174
+            },
+            {
+              "id": 4,
+              "name": "Piero Hincapié",
+              "card_number": 175
+            },
+            {
+              "id": 5,
+              "name": "Robert Andrich",
+              "card_number": 176
+            },
+            {
+              "id": 6,
+              "name": "Exequiel Palacios",
+              "card_number": 177
+            },
+            {
+              "id": 7,
+              "name": "Granit Xhaka",
+              "card_number": 178
+            },
+            {
+              "id": 8,
+              "name": "Aleix García",
+              "card_number": 179
+            },
+            {
+              "id": 9,
+              "name": "Patrik Schick",
+              "card_number": 180
+            }
+          ]
+        },
+        {
+         "group_name": "Eintracht Frankfurt",
+         "subset": "Base Cards",
+          "logo": "https://cdn.prod.website-files.com/68f550992570ca0322737dc2/6a178ef5d0a0bd93c809ded4_68f593f09634c1188f0d6e82_eintracht-frankfurt-footballlogos-org.webp",
+          "cards": [
+            {
+              "id": 1,
+              "name": " Team Badge",
+              "card_number": 181
+            },
+            {
+              "id": 2,
+              "name": "Kevin Trapp",
+              "leader": true,
+              "card_number": 182
+            },
+            {
+              "id": 3,
+              "name": "Robin Koch",
+              "card_number": 183
+            },
+            {
+              "id": 4,
+              "name": "Rasmus Kristensen",
+              "card_number": 184
+            },
+            {
+              "id": 5,
+              "name": "Arthur Theate",
+              "card_number": 185
+            },
+            {
+              "id": 6,
+              "name": "Mario Götze",
+              "card_number": 186
+            },
+            {
+              "id": 7,
+              "name": "Hugo Larsson",
+              "card_number": 187
+            },
+            {
+              "id": 8,
+              "name": "Ellyes Skhiri",
+              "card_number": 188
+            },
+            {
+              "id": 9,
+              "name": "Hugo Ékitike",
+              "card_number": 189
+            }
+          ]
+        },
+        {
+         "group_name": "Borussia Dortmund",
+         "subset": "Base Cards",
+          "logo": "https://cdn.prod.website-files.com/68f550992570ca0322737dc2/6a178ed53598132e63f2e3f7_68f592d7b5c9d747c139b5bc_borussia-dortmund-footballlogos-org.webp",
+          "cards": [
+            {
+              "id": 1,
+              "name": "Team Badge",
+              "card_number": 190
+            },
+            {
+              "id": 2,
+              "name": "Gregor Kobel",
+              "card_number": 191
+            },
+            {
+              "id": 3,
+              "name": "Nico Schlotterbeck",
+              "card_number": 192
+            },
+            {
+              "id": 4,
+              "name": "Waldemar Anton",
+              "card_number": 193
+            },
+            {
+              "id": 5,
+              "name": "Marcel Sabitzer",
+              "card_number": 194
+            },
+            {
+              "id": 6,
+              "name": "Emre Can",
+              "leader": true,
+              "card_number": 195
+            },
+            {
+              "id": 7,
+              "name": "Julian Brandt",
+              "card_number": 196
+            },
+            {
+              "id": 8,
+              "name": "Maximilian Beier",
+              "card_number": 197
+            },
+            {
+              "id": 9,
+              "name": "Serhou Guirassy",
+              "card_number": 198
+            }
+          ]
+        },
+        {
+          "group_name": "Sporting Clube de Portugal",
+          "subset": "Base Cards",
+          "logo": "https://cdn.prod.website-files.com/68f550992570ca0322737dc2/68f60a4d7eeae879d2815701_sporting-cp-portugal-footballlogos-org-p-800.webp",
+          "cards": [
+            {
+              "id": 1,
+              "name": "Team Badge",
+              "card_number": 199
+            },
+            {
+              "id": 2,
+              "name": "Ousmane Diomande",
+              "card_number": 200
+            },
+            {
+              "id": 3,
+              "name": "Zeno Debast",
+              "card_number": 201
+            },
+            {
+              "id": 4,
+              "name": "Gonçalo Inácio",
+              "card_number": 202
+            },
+            {
+              "id": 5,
+              "name": "Morten Hjulmand",
+              "leader": true,
+              "card_number": 203
+            },
+            {
+              "id": 6,
+              "name": "Pedro Gonçalves",
+              "card_number": 204
+            },
+            {
+              "id": 7,
+              "name": "Viktor Gyökeres",
+              "card_number": 205
+            },
+            {
+              "id": 8,
+              "name": "Francisco Trincão",
+              "card_number": 206
+            },
+            {
+              "id": 9,
+              "name": "Geovany Quenda",
+              "card_number": 207
+            }
+          ]
+        },
+        {
+          "group_name": "SL Benfica",
+          "subset": "Base Cards",
+          "logo": "https://cdn.prod.website-files.com/68f550992570ca0322737dc2/68f60a1ad5c3338dd7bb8ab7_sl-benfica-footballlogos-org.svg",
+          "cards": [
+            {
+              "id": 1,
+              "name": "Team Badge",
+              "card_number": 208
+            },
+            {
+              "id": 2,
+              "name": "Antonio Silva",
+              "card_number": 209
+            },
+            {
+              "id": 3,
+              "name": "Nicolás Otamendi",
+              "leader": true,
+              "card_number": 210
+            },
+            {
+              "id": 4,
+              "name": "Gianluca Prestianni",
+              "card_number": 211
+            },
+            {
+              "id": 5,
+              "name": "Fredrik Aursnes",
+              "card_number": 212
+            },
+            {
+              "id": 6,
+              "name": "Florentino",
+              "card_number": 213
+            },
+            {
+              "id": 7,
+              "name": "Andreas Schjelderup",
+              "card_number": 214
+            },
+            {
+              "id": 8,
+              "name": "Kerem Akturkoglu",
+              "card_number": 215
+            },
+            {
+              "id": 9,
+              "name": "Vangelis Pavlidis",
+              "card_number": 216
+            }
+          ] 
+        },
+        {
+          "group_name": "AFC Ajax",
+          "subset": "Base Cards",
+          "logo": "https://cdn.prod.website-files.com/68f550992570ca0322737dc2/68f605f384504bbe10be1765_ajax-amsterdam-footballlogos-org-p-800.webp",
+          "cards": [
+            {
+              "id": 1,
+              "name": "Team Badge",
+              "card_number": 217
+            },
+            {
+              "id": 2,
+              "name": "Remko Pasveer",
+              "card_number": 218
+            },
+            {
+              "id": 3,
+              "name": "Jorrel Hato",
+              "card_number": 219
+            },
+            {
+              "id": 4,
+              "name": "Youri Baas",
+              "card_number": 220
+            },
+            {
+              "id": 5,
+              "name": "Youri Regeer",
+              "card_number": 221
+            },
+            {
+              "id": 6,
+              "name": "Davy Klaassen",
+              "leader": true,
+              "card_number": 222
+            },
+            {
+              "id": 7,
+              "name": "Kenneth Taylor",
+              "card_number": 223
+            },
+            {
+              "id": 8,
+              "name": "Brian Brobbey",
+              "card_number": 224
+            },
+            {
+              "id": 9,
+              "name": "Mika Godts",
+              "card_number": 225
+            }
+          ]
+        },
+        {
+         "group_name": "Paris Saint-Germain",
+         "subset": "Base Cards",
+          "logo": "https://cdn.prod.website-files.com/68f550992570ca0322737dc2/6a178f32d2dd3d53009371e2_68f600e53341fbadf50e6015_paris-saint-germain-footballlogos-org.webp",
+          "cards": [
+            {
+              "id": 1,
+              "name": "Team Badge",
+              "card_number": 226
+            },
+            {
+              "id": 2,
+              "name": "Gianluigi Donnarumma",
+              "card_number": 227
+            },
+            {
+              "id": 3,
+              "name": "Marquinhos",
+              "leader": true,
+              "card_number": 228
+            },
+            {
+              "id": 4,
+              "name": "Willian Pacho",
+              "card_number": 229
+            },
+            {
+              "id": 5,
+              "name": "Nuno Mendes",
+              "card_number": 230
+            },
+            {
+              "id": 6,
+              "name": "Lucas Beraldo",
+              "card_number": 231
+            },
+            {
+              "id": 7,
+              "name": "Achraf Hakimi",
+              "card_number": 232
+            },
+            {
+              "id": 8,
+              "name": "Lucas Hernández",
+              "card_number": 233
+            },
+            {
+              "id": 9,
+              "name": "João Neves",
+              "card_number": 234
+            },
+            {
+              "id": 10,
+              "name": "Warren Zaïre-Emery",
+              "card_number": 235
+            },
+            {
+              "id": 11,
+              "name": "Vitinha",
+              "card_number": 236
+            },
+            {
+              "id": 12,
+              "name": "Fabían Ruiz",
+              "card_number": 237
+            },
+            {
+              "id": 13,
+              "name": "Lee Kang-in",
+              "card_number": 238
+            },
+            {
+              "id": 14,
+              "name": "Désiré Doué",
+              "card_number": 239
+            },
+            {
+              "id": 15,
+              "name": "Bradley Barcola",
+              "card_number": 240
+            },
+            {
+              "id": 16,
+              "name": "Khvicha Kvaratskhelia",
+              "card_number": 241
+            },
+            {
+              "id": 17,
+              "name": "Ousmane Dembélé",
+              "card_number": 242
+            },
+            {
+              "id": 18,
+              "name": "Gonçalo Ramos",
+              "card_number": 243
+            }
+          ]
+        },
+        {
+         "group_name": "SSC Napoli",
+         "subset": "Base Cards",
+          "logo": "https://cdn.prod.website-files.com/68f550992570ca0322737dc2/6a2dac0f635d5e15f396735b_69fb26f9f2009903393e5eff_napoli-footylogos.webp",
+          "cards": [
+            {
+              "id": 1,
+              "name": "Team Badge",
+              "card_number": 244
+            },
+            {
+              "id": 2,
+              "name": "Alex Meret",
+              "card_number": 245
+            },
+            {
+              "id": 3,
+              "name": "Giovanni Di Lorenzo",
+              "leader": true,
+              "card_number": 246
+            },
+            {
+              "id": 4,
+              "name": "Alessandro Buongiorno",
+              "card_number": 247
+            },
+            {
+              "id": 5,
+              "name": "Billy Gilmour",
+              "card_number": 248
+            },
+            {
+              "id": 6,
+              "name": "André-Frank Zambo Anguissa",
+              "card_number": 249
+            },
+            {
+              "id": 7,
+              "name": "Scott McTominay",
+              "card_number": 250
+            },
+            {
+              "id": 8,
+              "name": "Romelu Lukaku",
+              "card_number": 251
+            },
+            {
+              "id": 9,
+              "name": "Matteo Politano",
+              "card_number": 252
+            }
+          ] 
+        },
+        {
+          "group_name": "FC Internazionale Milano",
+          "subset": "Base Cards",
+          "logo": "https://assets.football-logos.cc/logos/italy/1500x1500/inter.d4ebfb95.png",
+          "cards": [
+            {
+              "id": 1,
+              "name": "Team Badge",
+              "card_number": 253
+            },
+            {
+              "id": 2,
+              "name": "Yann Sommer",
+              "card_number": 254
+            },
+            {
+              "id": 3,
+              "name": "Alessandro Bastoni",
+              "card_number": 255
+            },
+            {
+              "id": 4,
+              "name": "Federico Dimarco",
+              "card_number": 256
+            },
+            {
+              "id": 5,
+              "name": "Denzel Dumfries",
+              "card_number": 257
+            },
+            {
+              "id": 6,
+              "name": "Nicolò Barella",
+              "card_number": 258
+            },
+            {
+              "id": 7,
+              "name": "Hakan Çalhanoğlu",
+              "card_number": 259
+            },
+            {
+              "id": 8,
+              "name": "Lautaro Martínez",
+              "leader": true,
+              "card_number": 260
+            },
+            {
+              "id": 9,
+              "name": "Marcus Thuram",
+              "card_number": 261
+            }
+          ]   
+        },
+        {
+         "group_name": "Juventus",
+         "subset": "Base Cards",
+          "logo": "https://cdn.prod.website-files.com/68f550992570ca0322737dc2/6a2dabfe3f65f5442c3327cf_68f591085f8ea61de0a1cc6a_juventus-footballlogos-org.webp",
+          "cards": [
+            {
+              "id": 1,
+              "name": "Team Badge",
+              "card_number": 262
+            },
+            {
+              "id": 2,
+              "name": "Michele di Gregorio",
+              "card_number": 263
+            },
+            {
+              "id": 3,
+              "name": "Pierre Kalulu",
+              "card_number": 264
+            },
+            {
+              "id": 4,
+              "name": "Andrea Cambiaso",
+              "card_number": 265
+            },
+            {
+              "id": 5,
+              "name": "Manuel Locatelli",
+              "leader": true,
+              "card_number": 266
+            },
+            {
+              "id": 6,
+              "name": "Teun Koopmeiners",
+              "card_number": 267
+            },
+            {
+              "id": 7,
+              "name": "Weston McKennie",
+              "card_number": 268
+            },
+            {
+              "id": 8,
+              "name": "Khéphren Thuram",
+              "card_number": 269
+            },
+            {
+              "id": 9,
+              "name": "Kenan Yıldız",
+              "card_number": 270
+            }
+          ]
+        },
+        {
+         "group_name": "Bologna FC 1909",
+         "subset":"Base Cards",
+          "logo": "https://cdn.prod.website-files.com/68f550992570ca0322737dc2/68f590332f7e2e5f2f5c3c77_bologna-footballlogos-org-p-800.webp",
+          "cards": [
+            {
+              "id": 1,
+              "name": "Team Badge",
+              "card_number": 271
+            },
+            {
+              "id": 2,
+              "name": "Łukasz Skorupski",
+              "card_number": 272
+            },
+            {
+              "id": 3,
+              "name": "Juan Miranda",
+              "card_number": 273
+            },
+            {
+              "id": 4,
+              "name": "Lewis Ferguson",
+              "leader": true,
+              "card_number": 274
+            },
+            {
+              "id": 5,
+              "name": "Remo Freuler",
+              "card_number": 275
+            },
+            {
+              "id": 6,
+              "name": "Jens Odgaard",
+              "card_number": 276
+            },
+            {
+              "id": 7,
+              "name": "Dan Ndoye",
+              "card_number": 277
+            },
+            {
+              "id": 8,
+              "name": "Riccardo Orsolini",
+              "card_number": 278
+            },
+            {
+              "id": 9,
+              "name": "Santiago Castro",
+              "card_number": 279
+            }
+          ] 
+        },
+        {
+          "group_name": "ACF Fiorentina",
+          "subset": "Base Cards",
+          "logo": "https://cdn.prod.website-files.com/68f550992570ca0322737dc2/6a2dabf259cd193f6f9a9ee8_68f58f8cf8b72e10fcca7f4e_fiorentina-footballlogos-org.webp",
+          "cards": [
+            {
+              "id": 1,
+              "name": "Team Badge",
+              "card_number": 280
+            },
+            {
+              "id": 2,
+              "name": "David de Gea",
+              "card_number": 281
+            },
+            {
+              "id": 3,
+              "name": "Luca Ranieri",
+              "leader": true,
+              "card_number": 282
+            },
+            {
+              "id": 4,
+              "name": "Dodo",
+              "card_number": 283
+            },
+            {
+              "id": 5,
+              "name": "Pietro Comuzzo",
+              "card_number": 284
+            },
+            {
+              "id": 6,
+              "name": "Rolando Mandragora",
+              "card_number": 285
+            },
+            {
+              "id": 7,
+              "name": "Nicolò Fagioli",
+              "card_number": 286
+            },
+            {
+              "id": 8,
+              "name": "Cher Ndour",
+              "card_number": 287
+            },
+            {
+              "id": 9,
+              "name": "Moise Kean",
+              "card_number": 288
+            }
+          ]
+        },
+        {
+         "group_name": "FC Salzburg",
+         "subset":"Base Cards",
+          "logo": "https://cdn.prod.website-files.com/68f550992570ca0322737dc2/68f7d5d729210985b3252d2f_red-bull-salzburg-footballlogos-org.svg",
+          "cards": [
+            {
+              "id": 1,
+              "name": "Team Badge",
+              "card_number": 289
+            },
+            {
+              "id": 2,
+              "name": "Alexander Schlager",
+              "card_number": 290
+            },
+            {
+              "id": 3,
+              "name": "Samson Baidoo",
+              "card_number": 291
+            },
+            {
+              "id": 4,
+              "name": "Aleksa Terzic",
+              "card_number": 292
+            },
+            {
+              "id": 5,
+              "name": "Mads Bidstrup",
+              "leader": true,
+              "card_number": 293
+            },
+            {
+              "id": 6,
+              "name": "Oscar Gloukh",
+              "card_number": 294
+            },
+            {
+              "id": 7,
+              "name": "Bobby Clark",
+              "card_number": 295
+            },
+            {
+              "id": 8,
+              "name": "Dorgeles Nene",
+              "card_number": 296
+            },
+            {
+              "id": 9,
+              "name": "Karim Konaté",
+              "card_number": 297
+            }
+          ]
+        },
+        {
+          "group_name": "Celtic FC",
+          "subset": "Base Cards",
+          "logo": "https://cdn.prod.website-files.com/68f550992570ca0322737dc2/68f64be5020806df9d78f1b0_celtic-footballlogos-org-p-800.webp",
+          "cards": [
+            {
+              "id": 1,
+              "name": "Team Badge",
+              "card_number": 298
+            },
+            {
+              "id": 2,
+              "name": "Kasper Schmeichel",
+              "card_number": 299
+            },
+            {
+              "id": 3,
+              "name": "Cameron Carter-Vickers",
+              "card_number": 300
+            },
+            {
+              "id": 4,
+              "name": "Callum McGregor",
+              "leader": true,
+              "card_number": 301
+            },
+            {
+              "id": 5,
+              "name": "Daizen Maeda",
+              "card_number": 302
+            }
+          ]  
+        },
+        {
+          "group_name": "Athletic Club",
+          "subset": "Base Cards",
+          "logo": "https://cdn.prod.website-files.com/68f550992570ca0322737dc2/68f575de11002aa249f5bbee_athletic-club-bilbao-footballlogos-org-p-800.webp",
+          "cards": [
+            {
+              "id": 1,
+              "name": "Team Badge",
+              "card_number": 303
+            },
+            {
+              "id": 2,
+              "name": "Unai Simon",
+              "card_number": 304
+            },
+            {
+              "id": 3,
+              "name": "Dani Vivian",
+              "card_number": 305
+            },
+            {
+              "id": 4,
+              "name": "Iñaki Williams",
+              "leader": true,
+              "card_number": 306
+            }
+          ]  
+        },
+        {
+          "group_name": "Rangers FC",
+          "subset": "Base Cards",
+          "logo": "https://cdn.prod.website-files.com/68f550992570ca0322737dc2/68f64afa2cde215109669e5a_rangers-footballlogos-org.svg",
+          "cards": [
+            {
+              "id": 1,
+              "name": "Team Badge",
+              "card_number": 307
+            },
+            {
+              "id": 2,
+              "name": "Jack Butland",
+              "card_number": 308
+            },
+            {
+              "id": 3,
+              "name": "James Tavernier",
+              "leader": true,
+              "card_number": 309
+            },
+            {
+              "id": 4,
+              "name": "Robin Pröpper",
+              "card_number": 310
+            },
+            {
+              "id": 5,
+              "name": "Nedim Bajrami",
+              "card_number": 311
+            }
+          ]
+        },
+        {
+         "group_name": "FC Porto",
+         "subset": "Base Cards",
+          "logo": "https://cdn.prod.website-files.com/68f550992570ca0322737dc2/68f6099be5c55fdabb313b0d_fc-porto-footballlogos-org.svg",
+          "cards": [
+            {
+              "id": 1,
+              "name": "Team Badge",
+              "card_number": 312
+            },
+            {
+              "id": 2,
+              "name": "Diogo Costa",
+              "leader": true,
+              "card_number": 313
+            },
+            {
+              "id": 3,
+              "name": "Alan Varela",
+              "card_number": 314
+            },
+            {
+              "id": 4,
+              "name": "Samu Aghehowa",
+              "card_number": 315
+            }
+          ]
+        },
+        {
+            "group_name": "Man of the Match Wildcard",
+            "logo": "",
+            "subset": "Special Cards",
+            "cards": [
+                {
+                "id": 1,
+                "name": "Jeremie Frimpong",
+                "card_number": 316
+                },
+                {
+                "id": 2,
+                "name": "William Saliba",
+                "card_number": 317
+                },
+                {
+                "id": 3,
+                "name": "Joško Gvardiol",
+                "card_number": 318
+                },
+                {
+                "id": 4,
+                "name": "Reece James",
+                "card_number": 319
+                },
+                {
+                "id": 5,
+                "name": "Dan Burn",
+                "card_number": 320
+                },
+                {
+                "id": 6,
+                "name": "Pau Torres",
+                "card_number": 321
+                },
+                {
+                "id": 7,
+                "name": "Elliot Anderson",
+                "card_number": 322
+                },
+                {
+                "id": 8,
+                "name": "Pedro Porro",
+                "card_number": 323
+                },
+                {
+                "id": 9,
+                "name": "Pedri",
+                "card_number": 324
+                },
+                {
+                "id": 10,
+                "name": "Jude Bellingham",
+                "card_number": 325
+                },
+                {
+                "id": 11,
+                "name": "José María Giménez",
+                "card_number": 326
+                },
+                {
+                "id": 12,
+                "name": "Oihan Sancet",
+                "card_number": 327
+                },
+                {
+                "id": 13,
+                "name": "Gorka Guruzeta",
+                "card_number": 328
+                },
+                {
+                "id": 14,
+                "name": "Alphonso Davies",
+                "card_number": 329
+                },
+                {
+                "id": 15,
+                "name": "Alejandro Grimaldo",
+                "card_number": 330
+                },
+                {
+                "id": 16,
+                "name": "Emre Can",
+                "card_number": 331
+                },
+                {
+                "id": 17,
+                "name": "Nuno Mendes",
+                "card_number": 332
+                },
+                {
+                "id": 18,
+                "name": "Zeno Debast",
+                "card_number": 333
+                },
+                {
+                "id": 19,
+                "name": "João Mário",
+                "card_number": 334
+                },
+                {
+                "id": 20,
+                "name": "Youri Baas",
+                "card_number": 335
+                },
+                {
+                "id": 21,
+                "name": "David Neres",
+                "card_number": 336
+                },
+                {
+                "id": 22,
+                "name": "Federico Dimarco",
+                "card_number": 337
+                },
+                {
+                "id": 23,
+                "name": "Michele Di Gregorio",
+                "card_number": 338
+                },
+                {
+                "id": 24,
+                "name": "Juan Miranda",
+                "card_number": 339
+                },
+                {
+                "id": 25,
+                "name": "Dodô",
+                "card_number": 340
+                },
+                {
+                "id": 26,
+                "name": "Arthur Theate",
+                "card_number": 341
+                },
+                {
+                "id": 27,
+                "name": "Cyriel Dessers",
+                "card_number": 342
+                }
+            ]
+        },
+        {
+            "group_name": "Cup Champion",
+            "subset": "Special Cards",
+            "logo": "",
+            "cards": [
+                {
+                "id": 1,
+                "name": "Virgil van Dijk",
+                "card_number": 343
+                },
+                {
+                "id": 2,
+                "name": "Xabi Alonso",
+                "card_number": 344
+                },
+                {
+                "id": 3,
+                "name": "Rúben Dias",
+                "card_number": 345
+                },
+                {
+                "id": 4,
+                "name": "Ashley Cole",
+                "card_number": 346
+                },
+                {
+                "id": 5,
+                "name": "Frank Lampard",
+                "card_number": 347
+                },
+                {
+                "id": 6,
+                "name": "Fernando Torres",
+                "card_number": 348
+                },
+                {
+                "id": 7,
+                "name": "Xavi Hernández",
+                "card_number": 349
+                },
+                {
+                "id": 8,
+                "name": "Andrés Iniesta",
+                "card_number": 350
+                },
+                {
+                "id": 9,
+                "name": "Lionel Messi",
+                "card_number": 351
+                },
+                {
+                "id": 10,
+                "name": "Daniel Carvajal",
+                "card_number": 352
+                },
+                {
+                "id": 11,
+                "name": "Toni Kroos",
+                "card_number": 353
+                },
+                {
+                "id": 12,
+                "name": "Raúl",
+                "card_number": 354
+                },
+                {
+                "id": 13,
+                "name": "Diego Gódin",
+                "card_number": 355
+                },
+                {
+                "id": 14,
+                "name": "Antoine Griezmann",
+                "card_number": 356
+                },
+                {
+                "id": 15,
+                "name": "Manuel Neuer",
+                "card_number": 357
+                },
+                {
+                "id": 16,
+                "name": "Bastian Schweinsteiger",
+                "card_number": 358
+                },
+                {
+                "id": 17,
+                "name": "Samuel Eto'o",
+                "card_number": 359
+                },
+                {
+                "id": 18,
+                "name": "Alessandro Del Piero",
+                "card_number": 360
+                }
+            ]
+        },
+        {
+            "group_name": "All Action Hero",
+            "subset": "Special Cards",
+            "logo": "",
+            "cards": [
+                {
+                "id": 1,
+                "name": "Ryan Gravenberch",
+                "card_number": 361
+                },
+                {
+                "id": 2,
+                "name": "Mikel Merino",
+                "card_number": 362
+                },
+                {
+                "id": 3,
+                "name": "Rodri",
+                "card_number": 363
+                },
+                {
+                "id": 4,
+                "name": "Tosin Adarabioyo",
+                "card_number": 364
+                },
+                {
+                "id": 5,
+                "name": "Chris Wood",
+                "card_number": 365
+                },
+                {
+                "id": 6,
+                "name": "Brennan Johnson",
+                "card_number": 366
+                },
+                {
+                "id": 7,
+                "name": "Frenkie de Jong",
+                "card_number": 367
+                },
+                {
+                "id": 8,
+                "name": "Koke",
+                "card_number": 368
+                },
+                {
+                "id": 9,
+                "name": "Iñaki Williams",
+                "card_number": 369
+                },
+                {
+                "id": 10,
+                "name": "Mario Götze",
+                "card_number": 370
+                },
+                {
+                "id": 11,
+                "name": "Marcel Sabitzer",
+                "card_number": 371
+                },
+                {
+                "id": 12,
+                "name": "Vitinha",
+                "card_number": 372
+                },
+                {
+                "id": 13,
+                "name": "Gonçalo Inácio",
+                "card_number": 373
+                },
+                {
+                "id": 14,
+                "name": "Kenneth Taylor",
+                "card_number": 374
+                },
+                {
+                "id": 15,
+                "name": "Weston McKennie",
+                "card_number": 375
+                },
+                {
+                "id": 16,
+                "name": "Riccardo Orsolini",
+                "card_number": 376
+                },
+                {
+                "id": 17,
+                "name": "Daizen Maeda",
+                "card_number": 377
+                },
+                {
+                "id": 18,
+                "name": "Mohamed Diomande",
+                "card_number": 378
+                }
+            ] 
+        },
+        {
+            "group_name": "Heritage",
+            "subset": "Special Cards",
+            "logo": "",
+            "cards": [
+                {
+                "id": 1,
+                "name": "Ibrahima Konaté",
+                "card_number": 379
+                },
+                {
+                "id": 2,
+                "name": "Nicolas Jackson",
+                "card_number": 380
+                },
+                {
+                "id": 3,
+                "name": "Donyell Malen",
+                "card_number": 381
+                },
+                {
+                "id": 4,
+                "name": "Micky van de Ven ",
+                "card_number": 382
+                },
+                {
+                "id": 5,
+                "name": "Dani Olmo",
+                "card_number": 383
+                },
+                {
+                "id": 6,
+                "name": "Aurélien Tchouaméndi",
+                "card_number": 384
+                },
+                {
+                "id": 7,
+                "name": "Pepê",
+                "card_number": 385
+                },
+                {
+                "id": 8,
+                "name": "Alessandro Buongiorno",
+                "card_number": 386
+                },
+                {
+                "id": 9,
+                "name": "Andrea Cambiaso",
+                "card_number": 387
+                },
+                {
+                "id": 10,
+                "name": "David Raya",
+                "card_number": 388
+                },
+                {
+                "id": 11,
+                "name": "Jan Oblak",
+                "card_number": 389
+                },
+                {
+                "id": 12,
+                "name": "Unai Simón",
+                "card_number": 390
+                },
+                {
+                "id": 13,
+                "name": "Kevin Trapp",
+                "card_number": 391
+                },
+                {
+                "id": 14,
+                "name": "Gregor Kobel",
+                "card_number": 392
+                },
+                {
+                "id": 15,
+                "name": "Gianluigi Donnarumma",
+                "card_number": 393
+                },
+                {
+                "id": 16,
+                "name": "Yann Sommer",
+                "card_number": 394
+                },
+                {
+                "id": 17,
+                "name": "Manuel Neuer",
+                "card_number": 395
+                },
+                {
+                "id": 18,
+                "name": "Kasper Schmeichel",
+                "card_number": 396
+                },
+                {
+                "id": 19,
+                "name": "Bruno Guimarães",
+                "card_number": 397
+                },
+                {
+                "id": 20,
+                "name": "Ryan Yates",
+                "card_number": 398
+                },
+                {
+                "id": 21,
+                "name": "Atakan Karazor",
+                "card_number": 399
+                },
+                {
+                "id": 22,
+                "name": "Morten Hjulmand",
+                "card_number": 400
+                },
+                {
+                "id": 23,
+                "name": "Bernardo Silva",
+                "card_number": 401
+                },
+                {
+                "id": 24,
+                "name": "Lewis Ferguson",
+                "card_number": 402
+                },
+                {
+                "id": 25,
+                "name": "Luca Ranieri",
+                "card_number": 403
+                },
+                {
+                "id": 26,
+                "name": "Mads Bidstrup",
+                "card_number": 404
+                },
+                {
+                "id": 27,
+                "name": "James Tavernier",
+                "card_number": 405
+                }  
+            ]
+        },
+        {
+        "group_name": "Counter Attax",
+        "subset":"Special Cards",
+        "logo": "",
+        "cards": [
+            {
+            "id": 1,
+            "name": "Harvey Elliott",
+            "card_number": 406
+            },
+            {
+            "id": 2,
+            "name": "Mohamed Salah",
+            "card_number": 407
+            },
+            {
+            "id": 3,
+            "name": "Erling Haaland",
+            "card_number": 408
+            },
+            {
+            "id": 4,
+            "name": "Fernando Torres",
+            "card_number": 409
+            },
+            {
+            "id": 5,
+            "name": "Ollie Watkins",
+            "card_number": 410
+            },
+            {
+            "id": 6,
+            "name": "Endrick",
+            "card_number": 411
+            },
+            {
+            "id": 7,
+            "name": "Julián Alvarez",
+            "card_number": 412
+            },
+            {
+            "id": 8,
+            "name": "Ousmane Dembélé",
+            "card_number": 413
+            },
+            {
+            "id": 9,
+            "name": "Weston McKennie",
+            "card_number": 414
+            }
+        ]    
+        },
+        {
+            "group_name": "Show Boat",
+            "subset":"Special Cards",
+            "cards": [
+                {
+                "id": 1,
+                "name": "Robeto Firmino",
+                "card_number": 415
+                },
+                {
+                "id": 2,
+                "name": "Eden Hazard",
+                "card_number": 416
+                },
+                {
+                "id": 3,
+                "name": "Ronaldinho",
+                "card_number": 417
+                },
+                {
+                "id": 4,
+                "name": "Ronaldo",
+                "card_number": 418
+                },
+                {
+                "id": 5,
+                "name": "David Villa",
+                "card_number": 419
+                },
+                {
+                "id": 6,
+                "name": "Franck Ribéry",
+                "card_number": 420
+                },
+                {
+                "id": 7,
+                "name": "Dimitar Berbatov",
+                "card_number": 421
+                },
+                {
+                "id": 8,
+                "name": "Adriano",
+                "card_number": 422
+                },
+                {
+                "id": 9,
+                "name": "Zinedine Zidane",
+                "card_number": 423
+                }
+            ]    
+        },
+        {
+            "group_name": "Magic Memories",
+            "subset": "Special Cards",
+            "logo": "",
+            "cards": [
+            {
+                "id": 1,
+                "name": "Jerzy Dudek",
+                "card_number": 424
+                },
+                {
+                "id": 2,
+                "name": "Rodri",
+                "card_number": 425
+                },
+                {
+                "id": 3,
+                "name": "Didier Drogba",
+                "card_number": 426
+                },
+                {
+                "id": 4,
+                "name": "Morgan Rogers",
+                "card_number": 427
+                },
+                {
+                "id": 5,
+                "name": "Brennan Johnson",
+                "card_number": 428
+                },
+                {
+                "id": 6,
+                "name": "David Villa",
+                "card_number": 429
+                },
+                {
+                "id": 7,
+                "name": "Lionel Messi",
+                "card_number": 430
+                },
+                {
+                "id": 8,
+                "name": "Neymar Jr.",
+                "card_number": 431
+                },
+                {
+                "id": 9,
+                "name": "Gareth Bale",
+                "card_number": 432
+                },
+                {
+                "id": 10,
+                "name": "Rodrygo",
+                "card_number": 433
+                },
+                {
+                "id": 11,
+                "name": "Antoine Griezmann",
+                "card_number": 434
+                },
+                {
+                "id": 12,
+                "name": "Joshua Kimmich",
+                "card_number": 435
+                },
+                {
+                "id": 13,
+                "name": "Harry Kane",
+                "card_number": 436
+                },
+                {
+                "id": 14,
+                "name": "Patrik Schik",
+                "card_number": 437
+                },
+                {
+                "id": 15,
+                "name": "Gianluigi Donnarumma",
+                "card_number": 438
+                },
+                {
+                "id": 16,
+                "name": "Francesco Acerbi",
+                "card_number": 439
+                },
+                {
+                "id": 17,
+                "name": "Shunsuke Nakamura",
+                "card_number": 440
+                },
+                {
+                "id": 18,
+                "name": "James Tavernier",
+                "card_number": 441
+                }
+            ]   
+        },
+        {
+         "group_name": "Stealth Strike",
+         "subset": "Special Cards",
+         "logo": "",
+            "cards": [
+            {
+                "id": 1,
+                "name": "Cody Gakpo",
+                "card_number": 442
+                },
+                {
+                "id": 2,
+                "name": "Kai Havertz",
+                "card_number": 443
+                },
+                {
+                "id": 3,
+                "name": "Omar Marmoush",
+                "card_number": 444
+                },
+                {
+                "id": 4,
+                "name": "Cole Palmer",
+                "card_number": 445
+                },
+                {
+                "id": 5,
+                "name": "Anthony Gordon",
+                "card_number": 446
+                },
+                {
+                "id": 6,
+                "name": "Dominic Solanke",
+                "card_number": 447
+                },
+                {
+                "id": 7,
+                "name": "Lamine Yamal",
+                "card_number": 448
+                },
+                {
+                "id": 8,
+                "name": "Vini Jr.",
+                "card_number": 449
+                },
+                {
+                "id": 9,
+                "name": "Antoine Griezmann",
+                "card_number": 450
+                },
+                {
+                "id": 10,
+                "name": "Nico Williams",
+                "card_number": 451
+                },
+                {
+                "id": 11,
+                "name": "Michael Olise",
+                "card_number": 452
+                },
+                {
+                "id": 12,
+                "name": "Deniz Undav",
+                "card_number": 453
+                },
+                {
+                "id": 13,
+                "name": "Bradley Barcola",
+                "card_number": 454
+                },
+                {
+                "id": 14,
+                "name": "Romelu Lukaku",
+                "card_number": 455
+                },
+                {
+                "id": 15,
+                "name": "Denzel Dumfries",
+                "card_number": 456
+                },
+                {
+                "id": 16,
+                "name": "Moise Kean",
+                "card_number": 457
+                },
+                {
+                "id": 17,
+                "name": "Samu Aghehowa",
+                "card_number": 458
+                },
+                {
+                "id": 18,
+                "name": "Conrad Harder",
+                "card_number": 459
+                }
+            ]   
+        },
+        {
+            "group_name": "100 Club",
+            "subset": "Special Cards",
+            "logo": "",
+            "cards": [
+            {
+                "id": 1,
+                "name": "Gianluigi Donnarumma",
+                "card_number": 460
+                },
+                {
+                "id": 2,
+                "name": "Trent Alexander-Arnold",
+                "card_number": 461
+                },
+                {
+                "id": 3,
+                "name": "Denzel Dumfries",
+                "card_number": 462
+                },
+                {
+                "id": 4,
+                "name": "Declan Rice",
+                "card_number": 463
+                },
+                {
+                "id": 5,
+                "name": "Pedri",
+                "card_number": 464
+                },
+                {
+                "id": 6,
+                "name": "João Neves",
+                "card_number": 465
+                },
+                {
+                "id": 7,
+                "name": "Mohamed Salah",
+                "card_number": 466
+                },
+                {
+                "id": 8,
+                "name": "Raphinha",
+                "card_number": 467
+                }
+            ]
+        },
+        {
+        "group_name": "100 Club Unbeatable",
+        "subset":"Special Cards",
+        "cards": [
+            {
+                "id": 1,
+                "name": "Ousmane Dembélé",
+                "card_number": 468
+            }
+        ]           
+        },
+        {
+            "group_name": "Black Edge Edition",
+            "subset": "Special Cards",
+            "logo": "",
+            "cards": [
+            {
+                "id": 1,
+                "name": "Virgil van Dijk",
+                "card_number": "BE 1"
+                },
+                {
+                "id": 2,
+                "name": "Bukayo Saka",
+                "card_number": "BE 2"
+                },
+                {
+                "id": 3,
+                "name": "Lamine Yamal",
+                "card_number": "BE 3"
+                },
+                {
+                "id": 4,
+                "name": "Rodrygo",
+                "card_number": "BE 4"
+                },
+                {
+                "id": 5,
+                "name": "Julián Alvarez",
+                "card_number": "BE 5"
+                },
+                {
+                "id": 6,
+                "name": "Joshua Kimmich",
+                "card_number": "BE 6"
+                },
+                {
+                "id": 7,
+                "name": "Seriou Guirassy",
+                "card_number": "BE 7"
+                },
+                {
+                "id": 8,
+                "name": "Khvicha Kvaratskhelia",
+                "card_number": "BE 8"
+                },
+                {
+                "id": 9,
+                "name": "Marcus Thuram",
+                "card_number": "BE 9"
+                }
+            ]
+        },
+        {
+            "group_name": "Chrome Award Winner",
+            "subset": "Special Cards",
+            "logo": "",
+            "cards": [
+                {
+                "id": 1,
+                "name": "Raphinha",
+                "card_number": "CA 1"
+                },
+                {
+                "id": 2,
+                "name": "Désiré Doué",
+                "card_number": "CA 2"
+                },
+                {
+                "id": 3,
+                "name": "Lamine Yamal",
+                "card_number": "CA 3"
+                },
+                {
+                "id": 4,
+                "name": "Julián Alvarez",
+                "card_number": "CA 4"
+                },
+                {
+                "id": 5,
+                "name": "Gianluigi Donnarumma",
+                "card_number": "CA 5"
+                },
+                {
+                "id": 6,
+                "name": "Mohamed Salah",
+                "card_number": "CA 6"
+                },
+                {
+                "id": 7,
+                "name": "Harry Kane",
+                "card_number": "CA 7"
+                },
+                {
+                "id": 8,
+                "name": "Achraf Hakimi",
+                "card_number": "CA 8"
+                },
+                {
+                "id": 9,
+                "name": "Serhou Guirassy",
+                "card_number": "CA 9"
+                },
+                {
+                "id": 10,
+                "name": "João Neves",
+                "card_number": "CA 10"
+                },
+                {
+                "id": 11,
+                "name": "Raphinha",
+                "card_number": "CA 11"
+                },
+                {
+                "id": 12,
+                "name": "Vitinha",
+                "card_number": "CA 12"
+                },
+                {
+                "id": 13,
+                "name": "Davide Frattesi",
+                "card_number": "CA 13"
+                },
+                {
+                "id": 14,
+                "name": "Declan Rice",
+                "card_number": "CA 14"
+                },
+                {
+                "id": 15,
+                "name": "Vini Jr.",
+                "card_number": "CA 15"
+                },
+                {
+                "id": 16,
+                "name": "Jude Bellingham",
+                "card_number": "CA 16"
+                },
+                {
+                "id": 17,
+                "name": "Alisson Becker",
+                "card_number": "CA 17"
+                },
+                {
+                "id": 18,
+                "name": "Marquinhos",
+                "card_number": "CA 18"
+                }
+            ]
+        },
+        {
+            "group_name": "Hall of Fame",
+            "subset": "Special Cards",
+            "logo": "",
+            "cards": [
+            {
+                "id": 1,
+                "name": "Steven Gerrard",
+                "card_number": "HOF 1"
+                },
+                {
+                "id": 2,
+                "name": "Didier Drogba",
+                "card_number": "HOF 2"
+                },
+                {
+                "id": 3,
+                "name": "Gareth Bale",
+                "card_number": "HOF 3"
+                },
+                {
+                "id": 4,
+                "name": "Neymar Jr.",
+                "card_number": "HOF 4"
+                },
+                {
+                "id": 5,
+                "name": "Bastian Schweinsteiger",
+                "card_number": "HOF 5"
+                },
+                {
+                "id": 6,
+                "name": "Wesley Sneijder",
+                "card_number": "HOF 6"
+                },
+                {
+                "id": 7,
+                "name": "Ronaldinho",
+                "card_number": "HOF 7"
+                }
+            ]   
+        },
+        {
+            "group_name": "Ball Master",
+            "subset": "Special Cards",
+            "logo": "",
+            "cards": [
+            {
+                "id": 1,
+                "name": "Rodri",
+                "card_number": "BM 1"
+                },
+                {
+                "id": 2,
+                "name": "Mohamed Salah",
+                "card_number": "BM 2"
+                },
+                {
+                "id": 3,
+                "name": "Vini Jr.",
+                "card_number": "BM 3"
+                },
+                {
+                "id": 4,
+                "name": "Jamal Musiala",
+                "card_number": "BM 4"
+                }
+            ]   
+        },
+        {
+            "group_name": "The Graduates",
+            "subset": "Special Cards",
+            "logo": "",
+            "cards": [
+            {
+                "id": 1,
+                "name": "Phil Foden",
+                "card_number": "GRD 1"
+                },
+                {
+                "id": 2,
+                "name": "Reece James",
+                "card_number": "GRD 2"
+                },
+                {
+                "id": 3,
+                "name": "Lionel Messi",
+                "card_number": "GRD 3"
+                },
+                {
+                "id": 4,
+                "name": "Philipp Lahm",
+                "card_number": "GRD 4"
+                }
+            ]
+        },
+        {
+        "group_name": "Starter Pack Exclusive Limited Edition",
+        "subset": "Special Cards",
+        "logo": "",
+        "cards": [
+        {
+            "id": 1,
+            "name": "Erling Haaland",
+            "card_number": "LE 1",
+            "Type": "Goalblast!"
+        },
+        {
+            "id": 2,
+            "name": "Kylian Mbappé",
+            "card_number": "LE 2",
+            "Type": "Speed Strike"
+        }
+        ]   
+        },
+        {
+        "group_name": "Starboy Limited Edition",
+        "subset": "Special Cards",
+        "logo": "",
+        "cards": [
+            {
+            "id": 1,
+            "name": "Francesco Pio Esposito",
+            "card_number": "LE 3"
+            },
+            {
+            "id": 2,
+            "name": "Morgan Rogers",
+            "card_number": "LE 4"
+            },
+            {
+            "id": 3,
+            "name": "Pau Cubarsí",
+            "card_number": "LE 5"
+            },
+            {
+            "id": 4,
+            "name": "Nico Williams",
+            "card_number": "LE 6"
+            },
+            {
+            "id": 5,
+            "name": "Désiré Doué",
+            "card_number": "LE 7"
+            },
+            {
+            "id": 6,
+            "name": "Sávio",
+            "card_number": "LE 8"
+            },
+            {
+            "id": 7,
+            "name": "Florian Wirtz",
+            "card_number": "LE 9"
+            },
+            {
+            "id": 8,
+            "name": "Endrick",
+            "card_number": "LE 10"
+            },
+            {
+            "id": 9,
+            "name": "Geovany Quenda",
+            "card_number": "LE 11"
+            },
+            {
+            "id": 10,
+            "name": "Arne Engels",
+            "card_number": "LE 12"
+            },
+            {
+            "id": 11,
+            "name": "Myles Lewis-Skelly",
+            "card_number": "LE 13"
+            },
+            {
+            "id": 12,
+            "name": "Gavi",
+            "card_number": "LE 14"
+            },
+            {
+            "id": 13,
+            "name": "Jamal Musiala",
+            "card_number": "LE 15"
+            },
+            {
+            "id": 14,
+            "name": "António Silva",
+            "card_number": "LE 16"
+            },
+            {
+            "id": 15,
+            "name": "Jorrel Hato",
+            "card_number": "LE 17"
+            },
+            {
+            "id": 16,
+            "name": "Archie Gray",
+            "card_number": "LE 18"
+            },
+            {
+            "id": 17,
+            "name": "Dean Huijsen",
+            "card_number": "LE 19"
+            },
+            {
+            "id": 18,
+            "name": "Jobe Bellingham",
+            "card_number": "LE 20"
+            },
+            {
+            "id": 19,
+            "name": "Enzo Millot",
+            "card_number": "LE 21"
+            },
+            {
+            "id": 20,
+            "name": "Rodrigo Mora",
+            "card_number": "LE 22"
+            },
+            {
+            "id": 21,
+            "name": "Ethan Nwaneri",
+            "card_number": "LE 23"
+            },
+            {
+            "id": 22,
+            "name": "Rayan Cherki",
+            "card_number": "LE 24"
+            },
+            {
+            "id": 23,
+            "name": "Estêvão",
+            "card_number": "LE 25"
+            },
+            {
+            "id": 24,
+            "name": "João Neves",
+            "card_number": "LE 26"
+            },
+            {
+            "id": 25,
+            "name": "Jefte",
+            "card_number": "LE 27"
+            }
+        ]   
+        },
+        {
+            "group_name": "Platinum Pull Limited Edition",
+            "subset": "Special Cards",
+            "logo": "",
+            "cards": [
+                {
+                "id": 1,
+                "name": "Alexis Mac Allister",
+                "card_number": "PL 1"
+                },
+                {
+                "id": 2,
+                "name": "Martin Ødegaard",
+                "card_number": "PL 2"
+                },
+                {
+                "id": 3,
+                "name": "Enzo Fernádez",
+                "card_number": "PL 3"
+                },
+                {
+                "id": 4,
+                "name": "Sávio",
+                "card_number": "PL 4"
+                },
+                {
+                "id": 5,
+                "name": "Trent Alexander-Arnold",
+                "card_number": "PL 5"
+                },
+                {
+                "id": 6,
+                "name": "Joshua Kimmich",
+                "card_number": "PL 6"
+                },
+                {
+                "id": 7,
+                "name": "Khvicha Kvaratskhelia",
+                "card_number": "PL 7"
+                },
+                {
+                "id": 8,
+                "name": "Scott McTominay",
+                "card_number": "PL 8"
+                },
+                {
+                "id": 9,
+                "name": "Alessandro Bastoni",
+                "card_number": "PL 9"
+                }
+            ]
+        },
+        {
+           "group_name": "Match Attax Card Winner",
+           "subset":"Special Cards",
+            "cards": [
+            {
+                "id": 1,
+                "name": "Phil Foden",
+                "card_number": "MAW"
+            }
+            ]  
+        },
+        {
+            "group_name": "Infinity",
+            "subset": "Special Cards",
+            "logo": "",
+            "cards": [
+            {
+                "id": 1,
+                "name": "Mohamed Salah",
+                "card_number": "IN 1"
+            },
+            {
+                "id": 2,
+                "name": "Bukayo Saka",
+                "card_number": "IN 2"
+            },
+            {
+                "id": 3,
+                "name": "Erling Haaland",
+                "card_number": "IN 3"
+            },
+            {
+                "id": 4,
+                "name": "Robert Lewandowski",
+                "card_number": "IN 4"
+            },
+            {
+                "id": 5,
+                "name": "Kylian Mbappé",
+                "card_number": "IN 5"
+            },
+            {
+                "id": 6,
+                "name": "Jude Bellingham",
+                "card_number": "IN 6"
+            },
+            {
+                "id": 7,
+                "name": "Jamal Musiala",
+                "card_number": "IN 7"
+            },
+            {
+                "id": 8,
+                "name": "Vitinha",
+                "card_number": "IN 8"
+            },
+            {
+                "id": 9,
+                "name": "Lautaro Martínez",
+                "card_number": "IN 9"
+            }
+            ]  
+        },
+        {
+            "group_name": "Worldies Limited Edition",
+            "subset":"Special Cards",
+            "cards": [
+                {
+                "id": 1,
+                "name": "Omar Marmoush",
+                "card_number": "WLE 1"
+                },
+                {
+                "id": 2,
+                "name": "Trent Alexander-Arnold",
+                "card_number": "WLE 2"
+                },
+                {
+                "id": 3,
+                "name": "Michael Olise",
+                "card_number": "WLE 3"
+                },
+                {
+                "id": 4,
+                "name": "Alexander Isak",
+                "card_number": "WLE 4"
+                },
+                {
+                "id": 5,
+                "name": "Julián Alvarez",
+                "card_number": "WLE 5"
+                },
+                {
+                "id": 6,
+                "name": "Romelu Lukaku",
+                "card_number": "WLE 6"
+                },
+                {
+                "id": 7,
+                "name": "Bukayo Saka",
+                "card_number": "WLE 7"
+                },
+                {
+                "id": 8,
+                "name": "Lamine Yamal",
+                "card_number": "WLE 8"
+                },
+                {
+                "id": 9,
+                "name": "Federico Dimarco",
+                "card_number": "WLE 9"
+                },
+                {
+                "id": 10,
+                "name": "Florian Wirtz",
+                "card_number": "WLE 10"
+                },
+                {
+                "id": 11,
+                "name": "Kylian Mbappé",
+                "card_number": "WLE 11"
+                },
+                {
+                "id": 12,
+                "name": "Khvicha Kvaratskhelia",
+                "card_number": "WLE 12"
+                }
+            ]
+        },
+        {
+            "group_name": "Gladiators Limited Edition",
+            "subset": "Special Cards",
+            "logo": "",
+            "cards": [
+                {
+                "id": 1,
+                "name": "Erling Haaland",
+                "card_number": "GLE 1"
+                },
+                {
+                "id": 2,
+                "name": "Raphinha",
+                "card_number": "GLE 2"
+                },
+                {
+                "id": 3,
+                "name": "Scott McTominay",
+                "card_number": "GLE 3"
+                },
+                {
+                "id": 4,
+                "name": "Virgil van Dijk",
+                "card_number": "GLE 4"
+                },
+                {
+                "id": 5,
+                "name": "Jude Bellingham",
+                "card_number": "GLE 5"
+                },
+                {
+                "id": 6,
+                "name": "Lautaro Martínez",
+                "card_number": "GLE 6"
+                },
+                {
+                "id": 7,
+                "name": "Cole Palmer",
+                "card_number": "GLE 7"
+                },
+                {
+                "id": 8,
+                "name": "Harry Kane",
+                "card_number": "GLE 8"
+                },
+                {
+                "id": 9,
+                "name": "Ousmane Dembélé",
+                "card_number": "GLE 9"
+                },
+                {
+                "id": 10,
+                "name": "Declan Rice",
+                "card_number": "GLE 10"
+                },
+                {
+                "id": 11,
+                "name": "Conor Gallagher",
+                "card_number": "GLE 11"
+                },
+                {
+                "id": 12,
+                "name": "Granit Xhaka",
+                "card_number": "GLE 12"
+                }
+            ]
+        },
+        {
+            "group_name": "Festive Edition SquadZone",
+            "subset": "Special Cards",
+            "logo": "",
+            "cards": [
+            {
+                "id": 1,
+                "name": "Kevin Trapp",
+                "card_number": "SZ 01"
+            },
+            {
+                "id": 2,
+                "name": "Alistair Johnston",
+                "card_number": "SZ 02"
+            },
+            {
+                "id": 3,
+                "name": "Marc Cucurella",
+                "card_number": "SZ 03"
+            },
+            {
+                "id": 4,
+                "name": "Conor Gallagher",
+                "card_number": "SZ 04"
+            },
+            {
+                "id": 5,
+                "name": "Jude Bellingham",
+                "card_number": "SZ 05"
+            },
+            {
+                "id": 6,
+                "name": "Stephen Eustáquio",
+                "card_number": "SZ 06"
+            },
+            {
+                "id": 7,
+                "name": "Khvicha Kvaratskhelia",
+                "card_number": "SZ 07"
+            },
+            {
+                "id": 8,
+                "name": "Paul Gascoigne",
+                "card_number": "SZ 08"
+            },
+            {
+                "id": 9,
+                "name": "Alan Shearer",
+                "card_number": "SZ 09"
+            },
+            {
+                "id": 10,
+                "name": "Lamine Yamal",
+                "card_number": "SZ 10"
+            },
+            {
+                "id": 11,
+                "name": "Neymar Jr.",
+                "card_number": "SZ 11"
+            },
+            {
+                "id": 12,
+                "name": "Trent Alexander-Arnold",
+                "card_number": "SZ 12"
+            },
+            {
+                "id": 13,
+                "name": "Pascal Groß",
+                "card_number": "SZ 13"
+            },
+            {
+                "id": 14,
+                "name": "Désiré Doué",
+                "card_number": "SZ 14"
+            },
+            {
+                "id": 15,
+                "name": "Lucas Bergvall",
+                "card_number": "SZ 15"
+            },
+            {
+                "id": 16,
+                "name": "Weston McKennie",
+                "card_number": "SZ 16"
+            },
+            {
+                "id": 17,
+                "name": "Michael Olise",
+                "card_number": "SZ 17"
+            },
+            {
+                "id": 18,
+                "name": "Cody Gakpo",
+                "card_number": "SZ 18"
+            },
+            {
+                "id": 19,
+                "name": "Conrad Harder",
+                "card_number": "SZ 19"
+            },
+            {
+                "id": 20,
+                "name": "Alejandro Grimaldo",
+                "card_number": "SZ 20"
+            },
+            {
+                "id": 21,
+                "name": "David Silva",
+                "card_number": "SZ 21"
+            },
+            {
+                "id": 22,
+                "name": "Ethan Nwaneri",
+                "card_number": "SZ 22"
+            },
+            {
+                "id": 23,
+                "name": "Nicolo Barella",
+                "card_number": "SZ 23"
+            },
+            {
+                "id": 24,
+                "name": "Lorenzo Insigne",
+                "card_number": "SZ 24"
+            }
+            ]  
+        },
+        {
+            "group_name": "Black Gold Limited Edition",
+            "subset": "Special Cards",
+            "logo": "",
+            "cards": [
+                {
+                "id": 1,
+                "name": "Gabriel Martinelli",
+                "card_number": "BG 1"
+                },
+                {
+                "id": 2,
+                "name": "Omar Marmoush",
+                "card_number": "BG 2"
+                },
+                {
+                "id": 3,
+                "name": "Estêvão",
+                "card_number": "BG 3"
+                },
+                {
+                "id": 4,
+                "name": "Robert Lewandowski",
+                "card_number": "BG 4"
+                },
+                {
+                "id": 5,
+                "name": "Vini Jr.",
+                "card_number": "BG 5"
+                },
+                {
+                "id": 6,
+                "name": "Scott McTominay",
+                "card_number": "BG 6"
+                },
+                {
+                "id": 7,
+                "name": "Alessandro Bastoni",
+                "card_number": "BG 7"
+                },
+                {
+                "id": 8,
+                "name": "Désiré Doué",
+                "card_number": "BG 8"
+                }
+            ] 
+        },
+        {
+            "group_name": "Red Hot and Cold",
+            "subset": "Special Cards",
+            "logo": "",
+            "cards": [
+            {
+                "id": 1,
+                "name": "Lamine Yamal",
+                "card_number": "RH-LY"
+            },
+            {
+                "id": 2,
+                "name": "Cole Palmer",
+                "card_number": "ICE-CP"
+            }
+            ]  
+        },
+        {
+            "group_name": "Fired Up Limited Edition",
+            "subset": "Special Cards",
+            "logo": "",
+            "cards": [
+                {
+                "id": 1,
+                "name": "Harry Kane",
+                "card_number": "LE 28"
+                }
+            ]  
+        },
+        {
+            "group_name": "Lethal Combo",
+            "subset": "Special Cards",
+            "logo": "",
+            "cards": [
+            {
+                "id": 1,
+                "name": "Ronaldinho & Neymar Jr.",
+                "card_number": "LC-RN"
+            }
+            ]  
+        },
+        {
+            "group_name": "Tactic Card",
+            "subset":"Special Cards",
+            "cards": [
+            {
+                "id": 1,
+                "name": "Tactic Card",
+                "card_number": "T1"
+            }
+            ]   
+        },
+        {
+            "group_name": "Scream Team",
+            "subset":"Special Cards",
+            "cards": [
+            {
+                "id": 1,
+                "name": "Hugo Ekitike",
+                "card_number": "ST 1"
+            },
+            {
+                "id": 2,
+                "name": "Alvaro Carreras",
+                "card_number": "ST 21"
+            },
+            {
+                "id": 3,
+                "name": "Paul Pogba",
+                "card_number": "ST 3"
+            },
+            {
+                "id": 4,
+                "name": "Jarell Quansah",
+                "card_number": "ST 4"
+            },
+            {
+                "id": 5,
+                "name": "Tijjani Reijnders",
+                "card_number": "ST 5"
+            },
+            {
+                "id": 6,
+                "name": "Anthony Elanga",
+                "card_number": "ST 6"
+            },
+            {
+                "id": 7,
+                "name": "Thiago Almada",
+                "card_number": "ST 7"
+            },
+            {
+                "id": 8,
+                "name": "Petar Susic",
+                "card_number": "ST 8"
+            },
+            {
+                "id": 9,
+                "name": "Mohammed Kudus",
+                "card_number": "ST 9"
+            },
+            {
+                "id": 10,
+                "name": "Noa Lang",
+                "card_number": "ST 10"
+            },
+            {
+                "id": 11,
+                "name": "Kevin De Bruyne",
+                "card_number": "ST 11"
+            },
+            {
+                "id": 12,
+                "name": "Malik Tillman",
+                "card_number": "ST 12"
+            },
+            {
+                "id": 13,
+                "name": "João Pedro",
+                "card_number": "ST 13"
+            },
+            {
+                "id": 14,
+                "name": "Luís Diaz",
+                "card_number": "ST 14"
+            },
+            {
+                "id": 15,
+                "name": "Marcus Rashford",
+                "card_number": "ST 15"
+            },
+            {
+                "id": 16,
+                "name": "Jonathan David",
+                "card_number": "ST 16"
+            }
+            ]
+        },
+        {
+            "group_name": "Star Ballers",
+            "subset":"Special Cards",
+            "cards": [
+                {
+                "id": 1,
+                "name": "Raphinha",
+                "card_number": "SB 1"
+                },
+                {
+                "id": 2,
+                "name": "Florian Wirtz",
+                "card_number": "SB 2"
+                },
+                {
+                "id": 3,
+                "name": "Désiré Doué",
+                "card_number": "SB 3"
+                },
+                {
+                "id": 4,
+                "name": "Jonathan Burkardt",
+                "card_number": "SB 4"
+                },
+                {
+                "id": 5,
+                "name": "Jude Bellingham",
+                "card_number": "SB 5"
+                },
+                {
+                "id": 6,
+                "name": "Alejandro Garnacho",
+                "card_number": "SB 6"
+                },
+                {
+                "id": 7,
+                "name": "Jobe Bellingham",
+                "card_number": "SB 7"
+                },
+                {
+                "id": 8,
+                "name": " Nick Woltemade",
+                "card_number": "SB 8"
+                },
+                {
+                "id": 9,
+                "name": "Eberechi Eze",
+                "card_number": "SB 9"
+                },
+                {
+                "id": 10,
+                "name": "Gianluigi Donnarumma",
+                "card_number": "SB 10"
+                },
+                {
+                "id": 11,
+                "name": "Scott McTominay",
+                "card_number": "SB 11"
+                },
+                {
+                "id": 12,
+                "name": "Lautaro Martínez",
+                "card_number": "SB 12"
+                },
+                {
+                "id": 13,
+                "name": "Illia Zabarnyi",
+                "card_number": "SB 13"
+                },
+                {
+                "id": 14,
+                "name": "Julián Álvarez",
+                "card_number": "SB 14"
+                },
+                {
+                "id": 15,
+                "name": "Xavi Simons",
+                "card_number": "SB 15"
+                },
+                {
+                "id": 16,
+                "name": "Nicolas Jackson",
+                "card_number": "SB 16"
+                }
+            ]
+        },
+        {
+            "group_name": "Queens of Europe",
+            "subset": "Special Cards",
+            "logo": "",
+            "cards": [
+                {
+                "id": 1,
+                "name": "Alessia Russo",
+                "card_number": "QE 1"
+                },
+                {
+                "id": 2,
+                "name": "Cristiana Girelli",
+                "card_number": "QE 2"
+                },
+                {
+                "id": 3,
+                "name": "Klara Bühl",
+                "card_number": "QE 3"
+                },
+                {
+                "id": 4,
+                "name": "Chole Kelly",
+                "card_number": "QE 4"
+                },
+                {
+                "id": 5,
+                "name": "Caroline Wier",
+                "card_number": "QE 5"
+                },
+                {
+                "id": 6,
+                "name": "Olivia Smith",
+                "card_number": "QE 6"
+                },
+                {
+                "id": 7,
+                "name": "Alexia Putellas",
+                "card_number": "QE 7"
+                },
+                {
+                "id": 8,
+                "name": "Melchie Dumornay",
+                "card_number": "QE 8"
+                },
+                {
+                "id": 9,
+                "name": "Aitana Bonmati",
+                "card_number": "QE 9"
+                },
+                {
+                "id": 10,
+                "name": "Hannah Hampton",
+                "card_number": "QE 10"
+                },
+                {
+                "id": 11,
+                "name": "Ewa Pajor",
+                "card_number": "QE 11"
+                },
+                {
+                "id": 12,
+                "name": "Clara Mateo",
+                "card_number": "QE 12"
+                },
+                {
+                "id": 13,
+                "name": "Jule Brand",
+                "card_number": "QE 13"
+                },
+                {
+                "id": 14,
+                "name": "Georgia Stanway",
+                "card_number": "QE 14"
+                },
+                {
+                "id": 15,
+                "name": "Alyssa Thompson",
+                "card_number": "QE 15"
+                },
+                {
+                "id": 16,
+                "name": "Ella Toone",
+                "card_number": "QE 16"
+                }
+            ]
+        },
+        {
+            "group_name": "Extra Specials",
+            "subset": "Special Cards",
+            "logo": "",
+            "cards": [
+                {
+                "id": 1,
+                "name": "Franco Mastantuono",
+                "card_number": "ST LE 1"
+                },
+                {
+                "id": 2,
+                "name": "Viktor Gyökeres",
+                "card_number": "ST EN"
+                },
+                {
+                "id": 3,
+                "name": "Mariona Caldentey",
+                "card_number": "QE EN"
+                }
+            ]
+        },
+        {
+        "group_name": "Memorabilia",
+        "subset":"Special Cards",
+        "cards": [
+            {
+                "id": 1,
+                "name": "David Villa",
+                "card_number": "UCLW-DV"
+            },
+            {
+                "id": 2,
+                "name": "Frank Rijkaard",
+                "card_number": "UCLW-FR"
+            },
+            {
+                "id": 3,
+                "name": "Jerzy Dudek",
+                "card_number": "UCLW-JD"
+            },
+            {
+                "id": 4,
+                "name": "Juan Mata",
+                "card_number": "UCLW-JM"
+            },
+            {
+                "id": 5,
+                "name": "Karim Benzema",
+                "card_number": "UCLD-KM"
+            },
+            {
+                "id": 6,
+                "name": "Lionel Messi",
+                "card_number": "UCLW-LM"
+            },
+            {
+                "id": 7,
+                "name": "Marquinhos",
+                "card_number": "UCLW-MA"
+            },
+            {
+                "id": 8,
+                "name": "Toni Kroos ",
+                "card_number": "UCLW-TK"
+            },
+            {
+                "id": 9,
+                "name": "Wesley Sneijder",
+                "card_number": "UCLW-WS"
+            },
+            {
+                "id": 10,
+                "name": "Zinedine Zidane",
+                "card_number": "UCLW-ZZ"
+            }
+            ]
+        },
+        {
+            "group_name": "Player-Worn Jersey Relic",
+            "subset":"Special Cards",
+            "cards": [
+            {
+            "id": 1,
+            "name": "Alessandro Bastoni",
+            "card_number": "JR-AB"
+            },
+            {
+            "id": 2,
+            "name": "Antoine Griezmann",
+            "card_number": "JR-AG"
+            },
+            {
+            "id": 3,
+            "name": "Bradley Barcola",
+            "card_number": "JR-BB"
+            },
+            {
+            "id": 4,
+            "name": "Bruno Guimarães",
+            "card_number": "JR-BG"
+            },
+            {
+            "id": 5,
+            "name": "Cody Gakpo",
+            "card_number": "JR-CG"
+            },
+            {
+            "id": 6,
+            "name": "Dani Olmo",
+            "card_number": "JR-DO"
+            },
+            {
+            "id": 7,
+            "name": "Dominic Solanke",
+            "card_number": "JR-DS"
+            },
+            {
+            "id": 8,
+            "name": "Enzo Fernádez",
+            "card_number": "JR-EF"
+            },
+            {
+            "id": 9,
+            "name": "Fermín López",
+            "card_number": "JR-FL"
+            },
+            {
+            "id": 10,
+            "name": "Geovany Quenda",
+            "card_number": "JR-GQ"
+            },
+            {
+            "id": 11,
+            "name": "Jérémy Doku",
+            "card_number": "JR-JD"
+            },
+            {
+            "id": 12,
+            "name": "Joshua Kimmich",
+            "card_number": "JR-JK"
+            },
+            {
+            "id": 13,
+            "name": "Levi Colwill",
+            "card_number": "JR-LC"
+            },
+            {
+            "id": 14,
+            "name": "Lamine Yamal",
+            "card_number": "JR-LY"
+            },
+            {
+            "id": 15,
+            "name": "Manuel Akanji",
+            "card_number": "JR-MA"
+            },
+            {
+            "id": 16,
+            "name": "Mohamed Salah",
+            "card_number": "JR-MS"
+            },
+            {
+            "id": 17,
+            "name": "Marcus Thuram",
+            "card_number": "JR-MT"
+            },
+            {
+            "id": 18,
+            "name": "Nico Schlotterbeck",
+            "card_number": "JR-NS"
+            },
+            {
+            "id": 19,
+            "name": "Sávio",
+            "card_number": "JR-SAV"
+            },
+            {
+            "id": 20,
+            "name": "Santiago Castro",
+            "card_number": "JR-SC"
+            },
+            {
+            "id": 21,
+            "name": "Son Heung-Min",
+            "card_number": "JR-SHM"
+            },
+            {
+            "id": 22,
+            "name": "Vitinha",
+            "card_number": "JR-VIT"
+            }
+            ]
+        }
+    ]
+}
