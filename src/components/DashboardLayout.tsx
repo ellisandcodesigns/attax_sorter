@@ -38,7 +38,7 @@ export default function DashboardLayout() {
     "Collector";
 
   return (
-    <div className="w-full mx-auto flex flex-col justify-center">
+    <div className="w-full mx-auto flex flex-col justify-center max-w-4xl">
       {/* Header Action Section */}
       <div className="flex justify-between items-center border-b p-4 md:p-9 md:pt-0 w-full">
         <span className="text-sm text-muted-foreground">Hi, {displayUserText}!</span>
@@ -46,11 +46,11 @@ export default function DashboardLayout() {
           <DropdownMenu>
             <DropdownMenuTrigger  asChild><Menu className="cursor-pointer hover:opacity-70"/></DropdownMenuTrigger>
             <DropdownMenuContent align="end">
-                <DropdownMenuItem className="text-xs h-8 px-3 rounded-lg bg-primary w-full text-center">
+                <DropdownMenuItem className="text-xs rounded-lg bg-primary w-full text-center">
 
                   <button
                   onClick={() => signOut()}
-                  className=" hover:text-white transition-colors text-center text-xs font-semibold cursor-pointer w-full"
+                  className=" hover:text-white transition-colors text-center text-xs font-semibold cursor-pointer w-full px-4 py-2"
                 >
                   Sign Out
                 </button>
