@@ -124,7 +124,7 @@ const clearHold = () => {
             <Image
               src={card.clubLogo} 
               alt=""
-              className={`mix-blend-luminosity object-center object-contain w-60 h-60 ${card.club === "Tottenham Hotspur" ? "opacity-100 mix-blend-color" : "opacity-25"}`}
+              className={`image-touch mix-blend-luminosity object-center object-contain w-60 h-60 ${card.club === "Tottenham Hotspur" ? "opacity-100 mix-blend-color" : "opacity-25"}`}
               fill
               unoptimized
             />

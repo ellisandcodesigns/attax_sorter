@@ -119,6 +119,10 @@
   html::-webkit-scrollbar {
     @apply w-0;
   }
+  img {
+    @apply select-none;
+    -webkit-touch-callout: none; 
+  }
 }
 
 @theme inline {
@@ -162,4 +166,9 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+.image-touch {
+      @apply select-none;
+    -webkit-touch-callout: none; 
 }
