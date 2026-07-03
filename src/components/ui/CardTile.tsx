@@ -90,7 +90,7 @@ const clearHold = () => {
       onPointerLeave={clearHold}
       onPointerCancel={clearHold}
       className={cn(
-        "w-50 h-70 p-4 rounded-xl flex flex-col justify-between relative cursor-pointer transition-transform",
+        "w-full h-60 p-4 rounded-xl flex flex-col justify-between relative cursor-pointer transition-transform",
         holding && "scale-95 opacity-80",
         longHold && "ring-2 ring-red-500",
         owned ? "border border-primary" : "bg-card border border-border"

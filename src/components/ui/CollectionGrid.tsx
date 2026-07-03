@@ -166,7 +166,7 @@ const CollectionGrid = () => {
         {isSearching ? (
             /* 🔍 UI STATE 1: Search Results */
             filteredCards.length > 0 ? (
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 animate-in fade-in duration-300">
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 animate-in fade-in duration-300">
                     {filteredCards.map((card) => (
                         <CardTile
                             key={card.uid}
@@ -185,7 +185,7 @@ const CollectionGrid = () => {
             )
         ) : activeGroup ? (
             /* 📂 UI STATE 2: Opened Group/Folder View */
-            <div className="place-items-center grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 sm:justify-center sm:items-center gap-4 animate-in zoom-in-95 duration-200">
+            <div className="place-items-center grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 sm:justify-center sm:items-center gap-4 animate-in zoom-in-95 duration-200">
                 {(nestedGroupedCards[activeGroup.subset]?.[activeGroup.name] || []).map((card) => (
                     <CardTile
                         key={card.uid}
