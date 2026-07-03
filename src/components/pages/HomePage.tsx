@@ -17,16 +17,16 @@ export default function HomePage() {
             {!isCollectionsOpen ? (
                     <div className="flex flex-col gap-8 p-8">
 
-                        <div className="w-full cursor-pointer active:opacity-60 hover:opacity-80" onClick={() => setIsCollectionsOpen(true)}>
+                        <div className="w-full max-w-5xl cursor-pointer active:opacity-60 hover:opacity-80" onClick={() => setIsCollectionsOpen(true)}>
                             <GlobalProgress />
                         </div>
                     </div>
             ) : ( 
                 /* 🗺️ VIEW 2: The Core Card Grids */
-                <div className="space-y-4">
+                <div className="px-8 space-y-4">
                     {/* ⚡ FIXED: Correctly toggles back to dashboard selector view */}
                     <Button variant="outline" onClick={() => setIsCollectionsOpen(false)}>
-                        Back
+                        ← Back
                     </Button>
 
                    
