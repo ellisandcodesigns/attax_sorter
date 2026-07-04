@@ -1,14 +1,14 @@
 {
     "collections": [
         {
-            "id": 1,
+            "id": "match-attax-25-26",
             "name": "Match Attax 2025 / 2026",
-            "collection": "./cards.json"
+            "collection": "@/lib/data/matchAttax25-26.json"
         },
         {
-            "id": 2,
+            "id": "match-attax-25-26-extra",
             "name": "Match Attax Extras 2025 / 2026",
-            "collection": null
+            "collection": "@/lib/data/matchAttax25-26Extra.json"
         }
     ]
 }

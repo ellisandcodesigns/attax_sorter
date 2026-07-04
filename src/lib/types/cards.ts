@@ -40,6 +40,8 @@ export interface FlatCard {
   subset: string;
 
   isSpecial: boolean;
+
+  collectionId: string;
 }
 
 type CardStatus = "owned" | "missing";

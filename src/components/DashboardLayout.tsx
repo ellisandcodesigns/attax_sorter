@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { useUser } from "@/hooks/use-user"; // Check your exact folder name case here
 import { redirect } from "next/navigation";
 import HomePage from "@/components/pages/HomePage";
-import { Menu } from "lucide-react";
+import { Menu, X, LogOut, User } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -12,14 +12,14 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import SidebarApp from "./Sidebar";
 
 interface DashboardLayoutProps {
   children: React.ReactNode;
 }
 
-export default function DashboardLayout() {
+export default function DashboardLayout({ children }: DashboardLayoutProps) {
   const { signOut, user, loading } = useUser();
-  const [menu, openMenu] = useState(false);
 
   // Prevent flicker during initial session resolution
   if (loading) {
@@ -39,33 +39,13 @@ export default function DashboardLayout() {
 
   return (
     <div className="w-full mx-auto flex flex-col justify-center max-w-4xl">
-      {/* Header Action Section */}
-      <div className="flex justify-between items-center border-b p-4 md:p-9 md:pt-0 w-full">
-        <span className="text-sm text-muted-foreground">Hi, {displayUserText}!</span>
-        <div>
-          <DropdownMenu>
-            <DropdownMenuTrigger  asChild><Menu className="cursor-pointer hover:opacity-70"/></DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
-                <DropdownMenuItem className="text-xs rounded-lg bg-primary w-full text-center">
 
-                  <button
-                  onClick={() => signOut()}
-                  className=" hover:text-white transition-colors text-center text-xs font-semibold cursor-pointer w-full px-4 py-2"
-                >
-                  Sign Out
-                </button>
+      {/* SIDE BAR */}
 
-                </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
-          {menu}
-          
-        </div>
-        
-      </div>
-      
-      {/* Status components */}
-      <HomePage />
+
+        <SidebarApp>
+        {children}
+      </SidebarApp>
 
     </div>
   );

@@ -1,275 +1,423 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import { useCollection } from "@/hooks/CollectionContext";
 import CardTile from "./CardTile";
 import { useCardSearch } from "@/hooks/useCardSearch";
 import { FlatCard } from "@/lib/types/cards";
 
-// 📦 Shadcn Components Import
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-
 import { Progress } from "@/components/ui/progress";
 import { Badge } from "@/components/ui/badge";
 
-// 🔍 Icons
+import collectionsData from "@/lib/data/collections.json";
+
+
 import { Search, ChevronLeft, Layers } from "lucide-react";
-import { InputGroup, InputGroupInput, InputGroupAddon, InputGroupButton } from "@/components/ui/input-group";
+import { InputGroup, InputGroupAddon, InputGroupButton, InputGroupInput } from "./input-group";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem, DropdownMenuTrigger } from "./dropdown-menu";
+import { Field, FieldGroup, FieldLabel } from "./field";
+import { Checkbox } from "./checkbox";
 
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuGroup,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+type ViewMode = "overview" | "group" | "search";
 
-interface collectionProp {
-    card: FlatCard;
+interface Group {
+  subset: string;
+  name: string;
+  cards: FlatCard[];
 }
 
+interface CollectionGridProps {
+  collectionId: string;
+}
 
-const CollectionGrid = ({card}: collectionProp) => {
-  const { hasCard, getCardCount, allCards, addCard } = useCollection();
-  const { filteredCards, query, setQuery, setCollectionFilter, collectionFilter } = useCardSearch();
+const CollectionGrid = ({ collectionId }: CollectionGridProps) => {
+
   
+  const { 
+    hasCard, 
+    getCardCount, 
+    currentCollectionCards, 
+    addCard,
+    removeCard,
+    ownedUniqueCount,
+    totalCards,
+    duplicateCount
+  } = useCollection();
 
-  // 📂 Folders tracking state
-  const [activeGroup, setActiveGroup] = useState<{ subset: string; name: string } | null>(null);
+  const {
+    filteredCards,
+    query,
+    setQuery,
+    setCollectionFilter,
+    collectionFilter,
+    setDuplicatesOnly,
+    duplicatesOnly
+  } = useCardSearch(); 
 
-  const isSearching = query.trim().length > 0 || collectionFilter !== null;
-  
 
-  // 🧠 Group the flat cards by Subset -> Inner Collection Name
-  const nestedGroupedCards = useMemo(() => {
-    const structuralMap: Record<string, Record<string, FlatCard[]>> = {};
 
-    if (!Array.isArray(allCards)) return structuralMap;
+  const [activeView, setActiveView] = useState<ViewMode>("overview");
+  const [activeGroupIndex, setActiveGroupIndex] = useState(0);
 
-    allCards.forEach((card: FlatCard) => {
-      const subset = card.subset || "Other";
-      
-      let collectionName = card.group || "General";
-      if (!card.group || card.group === card.subset) {
-        collectionName = card.club || "General";
-      }
+  const isSearching =
+    query.trim().length > 0 || collectionFilter !== null || duplicatesOnly;
 
-      if (!structuralMap[subset]) {
-        structuralMap[subset] = {};
-      }
-      if (!structuralMap[subset][collectionName]) {
-        structuralMap[subset][collectionName] = [];
-      }
+  // Automatically switch views based on search/filter activity
+  useEffect(() => {
+    if (isSearching) {
+      setActiveView("search");
+    } else if (activeView === "search") {
+      setActiveView("overview");
+    }
+  }, [isSearching, activeView]);
 
-      structuralMap[subset][collectionName].push(card);
+
+
+/* Group only the cards belonging to the active collection */
+const nestedGroupedCards = useMemo(() => {
+  const map: Record<string, Record<string, FlatCard[]>> = {};
+
+  if (!Array.isArray(currentCollectionCards)) return map;
+
+  currentCollectionCards.forEach((card) => {
+    const subset = card.subset || "Other";
+    let collectionName = card.group || "General";
+    if (!card.group || card.group === card.subset) {
+      collectionName = card.club || "General";
+    }
+
+    if (!map[subset]) map[subset] = {};
+    if (!map[subset][collectionName]) map[subset][collectionName] = [];
+
+    map[subset][collectionName].push(card);
+  });
+
+  // ⚡ ADD THIS: Sorts every club's card deck numerically before rendering
+  Object.values(map).forEach((subsets) => {
+    Object.values(subsets).forEach((cardArray) => {
+      cardArray.sort((a, b) => Number(a.card_number) - Number(b.card_number));
+    });
+  });
+
+  return map;
+}, [currentCollectionCards]);
+
+
+  /* Flatten groups */
+  const flatGroups: Group[] = useMemo(() => {
+    const result: Group[] = [];
+
+    Object.entries(nestedGroupedCards).forEach(([subset, collections]) => {
+      Object.entries(collections).forEach(([name, cards]) => {
+        result.push({ subset, name, cards });
+      });
     });
 
-    return structuralMap;
-  }, [allCards]);
+    return result;
+  }, [nestedGroupedCards]);
+
+  const activeGroup = flatGroups[activeGroupIndex];
+
+  const goNextGroup = () => {
+    setActiveGroupIndex((prev) =>
+      Math.min(prev + 1, flatGroups.length - 1)
+    );
+  };
+
+  const goPrevGroup = () => {
+    setActiveGroupIndex((prev) => Math.max(prev - 1, 0));
+  };
+
+  const openGroup = (index: number) => {
+    setActiveGroupIndex(index);
+    setActiveView("group");
+  };
+
+  const tradeDuplicates = activeGroup?.cards.reduce((sum, card) => {
+    const qty = getCardCount(card.uid);
+    return sum + (qty > 1 ? qty - 1 : 0);
+  }, 0) ?? 0;
+
+  // 1. Find the name of the currently selected collection dynamically
+ const collectionName = useMemo(() => {
+  const found = collectionsData.collections.find((c: any) => c.id === collectionId);
+  return found ? found.name : "Collection Deck";
+}, [collectionId]);
+
+  // 2. Automatically extract unique subsets inside this specific dataset for the filter menu
+  const availableSubsets = useMemo(() => {
+    if (!Array.isArray(currentCollectionCards)) return [];
+    const subsets = currentCollectionCards.map(card => card.subset).filter(Boolean);
+    return Array.from(new Set(subsets));
+  }, [currentCollectionCards]);
+
+
+  
   return (
-    <div className="w-full flex flex-col max-w-6xl mx-auto space-y-6">
-        {!activeGroup ? (
-            <div className="flex flex-col md:flex-row gap-4 justify-between items-start md:items-center border-b border-border py-4">
+    <div className="w-full flex flex-col max-w-6xl mx-auto space-y-6 md:px-15 overflow-visible">
 
-                <div className="flex flex-col gap-2 w-full">
-                    <h1 className="text-xl font-bold tracking-tight">Match Attax 25/26 Collection</h1>
-                    <p className="mb-4 text-sm text-muted-foreground">Track owned cards, duplicates, and completion status.</p>
-                </div>
+      {/* SEARCH BAR */}
+      {activeView !== "group" && (
+        <div className="flex flex-col gap-4 justify-between items-start md:items-center border-b border-border py-4">
 
-                <div className="w-full">
+            {/* TITLE */}
+            <div className="flex flex-col gap-2 w-full">
+            <h1 className="text-xl font-bold tracking-tight">
+               {collectionName}
+            </h1>
+            <p className="mb-4 text-sm text-muted-foreground">
+                Track owned cards, duplicates, and completion status.
+            </p>
 
-                    <InputGroup className="w-full">
-                        <InputGroupInput 
-                        type="text"
-                        placeholder="Search..."
-                        value={query}
-                        onChange={(e) => setQuery(e.target.value)}
-                        className="p-2 pl-9 bg-card w-full rounded-lg"/>
-                        <InputGroupAddon align="inline-end">
-                            <DropdownMenu>
-                                <DropdownMenuTrigger asChild>
-                                    <InputGroupButton variant="default" className="px-5 py-3">
-                                        Filter
-                                    </InputGroupButton>
-                                </DropdownMenuTrigger>
-                                <DropdownMenuContent align="end">
-                                    <DropdownMenuGroup>
-                                        <DropdownMenuItem>
-                                        <Button 
-                                        variant={collectionFilter === null ? "default" : "ghost"}
-                                        size="sm"
-                                        onClick={() => setCollectionFilter(null)}
-                                        className="text-xs h-8 px-3 rounded-lg bg-primary w-full"
-                                        >
-                                        All
-                                        </Button>
-                                        </DropdownMenuItem>
-                                        <DropdownMenuItem>
-                                        <Button 
-                                        variant={collectionFilter === "Base Cards" ? "default" : "ghost"}
-                                        size="sm"
-                                        onClick={() => setCollectionFilter("Base Cards")}
-                                        className="text-xs h-8 px-3 rounded-lg bg-primary w-full"
-                                        >
-                                        Base
-                                        </Button>
-                                        </DropdownMenuItem>
-                                        <DropdownMenuItem>
-                                        <Button 
-                                        variant={collectionFilter === "Special Cards" ? "default" : "ghost"}
-                                        size="sm"
-                                        onClick={() => setCollectionFilter("Special Cards")}
-                                        className="text-xs h-8 px-3 rounded-lg bg-primary w-full"
-                                        >
-                                        Specials
-                                        </Button>
-                                        </DropdownMenuItem>
-                                    </DropdownMenuGroup>
-                                </DropdownMenuContent>
-                            </DropdownMenu>
-                        </InputGroupAddon>
-                    </InputGroup>
-
-                </div>
-            
-
+            <div className="flex w-full justify-between py-5">
+              <div className="bg-secondary p-2 rounded-lg min-w-30 text-center flex flex-col">
+                <div className="text-muted-foreground text-sm">Owned</div>
+                <div className="text-2xl text-accent-foreground">{ownedUniqueCount}</div>
+              </div>
+              <div className="bg-secondary p-2 rounded-lg min-w-30 text-center flex flex-col">
+                <div className="text-muted-foreground text-sm">Need</div>
+                <div className="text-2xl text-accent-foreground">{totalCards - ownedUniqueCount}</div>
+              </div>
+              <div className="bg-secondary p-2 rounded-lg min-w-30 text-center flex flex-col">
+                <div className="text-muted-foreground text-sm">Duplicates</div>
+                <div className="text-2xl text-accent-foreground">{duplicateCount}</div>
+              </div>
             </div>
-        ): (
-            <div className="flex flex-col items-center gap-6 border-b pb-4 border-border">
-                <h2 className="text-xl font-bold tracking-tight">{activeGroup.name}</h2>
-                <div className="flex items-center gap-4 w-full justify-between">
-                    <Button 
-                    variant="outline"
-                    size="sm"
-                    onClick={() => setActiveGroup(null)}
-                    className="gap-2 h-9 border-border hover:bg-muted"
-                    >
-                    <ChevronLeft className="h-4 w-4"/>
-                    Back to Overview
-                    </Button>
-                    <Badge variant="secondary" className="mb-0.5 text-[10px] tracking-wider uppercase">
-                    {activeGroup.subset}
-                </Badge>
-                </div>
-                
-                
             </div>
+
+            {/* SEARCH + FILTERS */}
+            <div className="w-full py-2">
+          <InputGroup className="w-full">
+              <InputGroupInput
+                type="text"
+                placeholder="Search..."
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                className="px-8 bg-card w-full rounded-lg"
+              />
+
+              <InputGroupAddon align="inline-end">
+                <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                      <InputGroupButton variant="default" className="px-5 py-3">
+                          Filter
+                      </InputGroupButton>
+                    </DropdownMenuTrigger>
+
+                    <DropdownMenuContent align="end">
+                      <DropdownMenuGroup>
+                        {/* Clear Filter Button */}
+                        <DropdownMenuItem>
+                          <Button
+                              onClick={() => setCollectionFilter(null)}
+                              className={`w-full text-xs h-8 justify-start text-secondary-foreground ${collectionFilter === null ? "text-secondary": "text-secondary-foreground"}`}
+                              variant={collectionFilter === null ? "default" : "ghost"}
+                          >
+                              All Cards
+                          </Button>
+                        </DropdownMenuItem>
+
+                        {/* ⚡ DYNAMIC SUBSETS LOOP */}
+                        {availableSubsets.map((subset) => (
+                          <DropdownMenuItem key={subset}>
+                            <Button
+                                onClick={() => setCollectionFilter(subset)}
+                                className={`w-full text-xs h-8 justify-start ${collectionFilter === subset ? "text-secondary": "text-secondary-foreground"}`}
+                                variant={collectionFilter === subset ? "default" : "ghost"}
+                            >
+                                {subset}
+                            </Button>
+                          </DropdownMenuItem>
+                        ))}
+                      </DropdownMenuGroup>
+                    </DropdownMenuContent>
+                </DropdownMenu>
+              </InputGroupAddon>
+          </InputGroup>
+        </div>
+
+            {/* DUPLICATES */}
+            <div className="w-full">
+            <FieldGroup className="w-full">
+                <Field orientation="horizontal">
+                  <Checkbox
+                      checked={duplicatesOnly}
+                      onCheckedChange={(checked) =>
+                        setDuplicatesOnly(!!checked)
+                      }
+                      id="duplicates-checkbox"
+                  />
+                  <FieldLabel htmlFor="duplicates-checkbox" className="cursor-pointer">
+                      Show Duplicates Only
+                  </FieldLabel>
+                </Field>
+            </FieldGroup>
+            </div>
+
+
+        </div>
         )}
 
-               {isSearching && (
-            <div className="flex items-center gap-2 text-sm text-muted-foreground border rounded-lg p-2 bg-muted/10">
-                <Search className="h-4 w-4 text-primary" />
-                <span>Showing Results:  
-                    <strong> {filteredCards.length} </strong>
-                    items located
-                </span>
+      {/* SEARCH RESULTS */}
+      {activeView === "search" && (
+        <>
+          {filteredCards.length > 0 ? (
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {filteredCards.map((card) => (
+                <CardTile
+                  key={card.uid}
+                  card={card}
+                  owned={hasCard(card.uid)}
+                  duplicates={getCardCount(card.uid)}
+                  onAdd={() => addCard(card.uid)}
+                  onRemove={() => removeCard(card.uid)}
+                />
+              ))}
             </div>
-        )}
-
-        {isSearching ? (
-            /* 🔍 UI STATE 1: Search Results */
-            filteredCards.length > 0 ? (
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 animate-in fade-in duration-300">
-                    {filteredCards.map((card) => (
-                        <CardTile
-                            key={card.uid}
-                            card={card}
-                            owned={hasCard(card.uid)}
-                            duplicates={getCardCount(card.uid)}
-                            onClick={() => addCard(card.uid)}
-                        />
-                    ))}
-                </div>
-            ) : (
-                <div className="text-center py-12 border border-dashed rounded-lg bg-muted/20">
-                    <Layers className="h-8 w-8 mx-auto mb-2 text-muted-foreground opacity-50" />
-                    <p className="text-sm font-semibold text-muted-foreground">No matches found in your collection</p>
-                </div>
-            )
-        ) : activeGroup ? (
-            /* 📂 UI STATE 2: Opened Group/Folder View */
-            <div className="place-items-center grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 sm:justify-center sm:items-center gap-4 animate-in zoom-in-95 duration-200">
-                {(nestedGroupedCards[activeGroup.subset]?.[activeGroup.name] || []).map((card) => (
-                    <CardTile
-                        key={card.uid}
-                        card={card}
-                        owned={hasCard(card.uid)}
-                        duplicates={getCardCount(card.uid)}
-                        onClick={() => addCard(card.uid)}
-                    />
-                ))}
+          ) : (
+            <div className="text-center py-10 text-muted-foreground">
+              No results found
             </div>
-        ) : (
-            /* 🗂️ UI STATE 3: Main Dashboard Folder View */
-            Object.entries(nestedGroupedCards).map(([subsetName, collectionGroups]) => (
-                <section className="space-y-4 pt-2" key={subsetName}>
-                    <div className="flex flex-col gap-2">
-                        <div className="text-lg font-extrabold tracking-tight uppercase border-l-4 border-primary pl-2.5 text-foreground">
-                            <h2>{subsetName}</h2>
-                        </div>
+          )}
+        </>
+      )}
 
-                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 p-2 gap-4">
-                            {Object.entries(collectionGroups).map(([groupName, cardsArray]) => {
-                                const ownedCount = cardsArray.filter(c => hasCard(c.uid)).length;
-                                const totalCount = cardsArray.length;
-                                const isComplete = ownedCount === totalCount && totalCount > 0;
-                                const completionPercentage = totalCount > 0 ? (ownedCount / totalCount) * 100 : 0;
-                                
-                                return (
-                                    <Card 
-                                        key={groupName}
-                                        onClick={() => setActiveGroup({ subset: subsetName, name: groupName })}
-                                        className="group cursor-pointer active:scale-[0.99] transition-all duration-200 relative shadow-sm flex flex-col justify-between overflow-hidden min-h-55"
-                                    >
-                                        {/* Status Badge */}
-                                        <div className={`absolute top-4 right-4 px-2.5 py-1 text-[11px] font-bold rounded-full ${
-                                            isComplete ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"
-                                        }`}>
-                                            {isComplete ? "Complete" : "In Progress"}
-                                        </div>
+      {/* GROUP VIEW */}
+      {activeView === "group" && activeGroup && (
+        <>
+        
+          <div className="flex justify-between items-center border-b pb-3">
+            <Button onClick={() => setActiveView("overview")}>
+              <ChevronLeft className="w-4 h-4 mr-2" />
+              Back
+            </Button>
 
-                                        <CardHeader className="flex flex-col gap-3 space-y-0 p-5 w-full">
-                                            {/* Image Wrapper */}
-                                            <div className="w-14 h-14 flex items-center justify-center relative bg-muted/30 rounded-lg p-1.5 border border-border/60 group-hover:scale-105 transition-transform duration-200">
-                                                {cardsArray[0]?.clubLogo ? (
-                                                    <Image
-                                                        src={cardsArray[0]?.clubLogo} 
-                                                        alt={groupName} 
-                                                        width={45} 
-                                                        height={45}
-                                                        className="object-contain image-touch"
-                                                    />
-                                                ) : (
-                                                    <Layers className="h-5 w-5 text-muted-foreground" />
-                                                )}
-                                            </div>
+            <h2 className="font-bold">{activeGroup.name}</h2>
 
-                                            <CardTitle className="text-sm font-bold truncate group-hover:text-primary transition-colors max-w-[70%]">
-                                                {groupName}
-                                            </CardTitle>
-                                        </CardHeader>
+            <Badge>{activeGroup.subset}</Badge>
+          </div>
 
-                                        {/* Fixed Progress Layout */}
-                                        <CardContent className="w-full p-5 pt-0 mt-auto space-y-2">
-                                            <div className="flex justify-between items-baseline text-xs text-muted-foreground">
-                                                <div>
-                                                    <span className="text-2xl font-extrabold text-foreground">{ownedCount}</span>
-                                                    <span> / {totalCount}</span>
-                                                </div>
-                                                <span className="font-semibold text-primary">{Math.round(completionPercentage)}%</span>
-                                            </div>
-                                            <Progress value={completionPercentage} className="h-1.5 bg-muted w-full" />
-                                        </CardContent>
-                                    </Card>
-                                );
-                            })}
-                        </div>
+           <div className="flex justify-between pt-4">
+            <Button onClick={goPrevGroup} disabled={activeGroupIndex === 0}>
+              Prev
+            </Button>
+
+            <span>
+              {activeGroupIndex + 1} / {flatGroups.length}
+            </span>
+
+            <Button
+              onClick={goNextGroup}
+              disabled={activeGroupIndex === flatGroups.length - 1}
+            >
+              Next
+            </Button>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {activeGroup.cards.map((card) => (
+              <CardTile
+              key={card.uid}
+              card={card}
+              owned={hasCard(card.uid)}
+              duplicates={getCardCount(card.uid)}
+              onAdd={() => addCard(card.uid)}       // Explicit handler for adding
+              onRemove={() => removeCard(card.uid)} // Explicit handler for removing
+            />
+
+            ))}
+          </div>
+
+          <div className="flex justify-between pt-4">
+            <Button onClick={goPrevGroup} disabled={activeGroupIndex === 0}>
+              Prev
+            </Button>
+
+            <span>
+              {activeGroupIndex + 1} / {flatGroups.length}
+            </span>
+
+            <Button
+              onClick={goNextGroup}
+              disabled={activeGroupIndex === flatGroups.length - 1}
+            >
+              Next
+            </Button>
+          </div>
+        </>
+      )}
+
+      {/* OVERVIEW */}
+      {activeView === "overview" &&
+        Object.entries(nestedGroupedCards).map(([subset, collections]) => (
+          <section key={subset} className="space-y-4">
+            <h2 className="font-bold uppercase">{subset}</h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {Object.entries(collections).map(([name, cards], idx) => {
+                const owned = cards.filter((c) => hasCard(c.uid)).length;
+                const total = cards.length;
+                const percent = total ? (owned / total) * 100 : 0;
+
+                const isComplete = owned === total && total > 0;
+
+                const globalIndex = flatGroups.findIndex(
+                  (g) => g.name === name && g.subset === subset
+                );
+
+                const tradeDuplicates = cards.reduce<number>((sum, card) => {
+                  const qty = getCardCount(card.uid);
+                  return sum + (qty > 1 ? qty - 1 : 0);
+                }, 0);
+
+                return (
+                  <Card
+                    key={name}
+                    className="group cursor-pointer active:scale-[0.99] transition-all duration-200 relative shadow-sm flex flex-col justify-between overflow-hidden min-h-55 w-full"
+                    onClick={() => openGroup(globalIndex)}
+                  >
+
+                    <div className={`absolute top-4 right-4 px-2.5 py-1 text-[11px] font-bold rounded-full ${isComplete ? "bg-primary text-primary-foreground": "bg-muted text-muted-foreground"}`}> 
+
+                        {isComplete ? "Complete": "In Progress"}
+
                     </div>
-                </section>
-            ))
-        )}
+
+                
+                    <CardHeader className="flex flex-col gap-3 space-y-0 p-5 w-full"> {/* Image Wrapper */} 
+                        
+                        <div className="w-14 h-14 flex items-center justify-center relative bg-muted/30 rounded-lg p-1.5 border border-border/60 group-hover:scale-105 transition-transform duration-200"> 
+                        {cards[0]?.clubLogo ? ( 
+                            <Image src={cards[0]?.clubLogo} alt={name} width={45} height={45} className="object-contain image-touch" /> 
+                            ) : ( 
+                            <Layers className="h-5 w-5 text-muted-foreground" /> 
+                            )} 
+                        </div> 
+
+                        <CardTitle className="text-sm font-bold truncate group-hover:text-primary transition-colors flex justify-between w-full py-2"> 
+                        <div>{name}</div>
+                          {tradeDuplicates > 0 && (
+                            <div className="text-xs text-emerald-500 font-semibold">
+                              +{tradeDuplicates} Duplicates
+                            </div>
+                          )}
+                        </CardTitle> 
+
+                    </CardHeader>
+
+                    <CardContent className="w-full p-5 pt-0 mt-auto space-y-2">
+                      <div className="flex justify-between items-baseline text-xs text-muted-foreground"> <div> <span className="text-2xl font-extrabold text-foreground">{owned}</span> <span> / {total}</span> </div> <span className="font-semibold text-primary">{Math.round(percent)}%</span> </div>
+                      <Progress value={percent} className="h-1.5 bg-muted w-full" />
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
+          </section>
+        ))}
     </div>
   );
 };

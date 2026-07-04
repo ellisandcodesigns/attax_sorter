@@ -13,59 +13,13 @@ interface CardTileProps {
   card: FlatCard;
   owned: boolean;
   duplicates: number;
-  onClick: () => void;
+  onAdd: () => void;
+  onRemove: () => void;
 }
 
-const CardTile = ({ card, owned, duplicates, onClick }: CardTileProps) => {
+const CardTile = ({ card, owned, duplicates, onAdd, onRemove }: CardTileProps) => {
   const logo = card.clubLogo ?? "";
   const hasValidLogo = typeof logo === "string" && logo.trim().length > 0;
-  const { removeCard, removeAllCards } = useCollection();
-  const [longHold, setLongHold] = useState(false);
-
-  const holdStartTime = useRef<number>(0);
-  const holdInterval = useRef<NodeJS.Timeout | null>(null);
-  const actionTaken = useRef(false);
-
-  const HOLD_THRESHOLD = 600; 
-
-  const handlePointerDown = (e: React.PointerEvent) => {
-    if (e.pointerType === "mouse" && e.button !== 0) return;
-
-    actionTaken.current = false;
-    holdStartTime.current = Date.now();
-
-    holdInterval.current = setInterval(() => {
-      const elapsed = Date.now() - holdStartTime.current;
-      if (elapsed > HOLD_THRESHOLD) setLongHold(true);
-    }, 16);
-  };
-
-  const handlePointerUp = () => {
-    if (!holdStartTime.current || actionTaken.current) return;
-
-    const elapsed = Date.now() - holdStartTime.current;
-
-    clearInterval(holdInterval.current!);
-    holdInterval.current = null;
-    setLongHold(false);
-
-    if (elapsed >= HOLD_THRESHOLD) {
-      removeAllCards(card.uid);
-    }
-
-    actionTaken.current = true;
-    holdStartTime.current = 0;
-  };
-
-  const clearHold = () => {
-    if (holdInterval.current) {
-      clearInterval(holdInterval.current);
-      holdInterval.current = null;
-    }
-    holdStartTime.current = 0;
-    setLongHold(false);
-  };
-
   // Prevent event bubbling up to the Card parent wrapper
   const handleButtonClick = (e: React.MouseEvent, action: () => void) => {
     e.stopPropagation();
@@ -74,13 +28,8 @@ const CardTile = ({ card, owned, duplicates, onClick }: CardTileProps) => {
 
   return (
     <Card 
-      onPointerDown={handlePointerDown}
-      onPointerUp={handlePointerUp}
-      onPointerLeave={clearHold}
-      onPointerCancel={clearHold}
       className={cn(
         "w-full h-70 p-4 rounded-xl flex flex-col justify-evenly relative cursor-pointer transition-transform",
-        longHold && "ring-2 ring-red-500",
         owned ? "border border-primary" : "bg-card border border-border"
       )}
     >
@@ -128,7 +77,7 @@ const CardTile = ({ card, owned, duplicates, onClick }: CardTileProps) => {
 
         <div className="w-full flex justify-between items-center z-20">
           <Button 
-            onClick={(e) => handleButtonClick(e, () => removeCard(card.uid))} 
+            onClick={(e) => handleButtonClick(e, () => onRemove())} 
             onPointerDown={(e) => e.stopPropagation()} // Blocks card long press initiation
             className="cursor-pointer" 
             variant="secondary"
@@ -139,7 +88,7 @@ const CardTile = ({ card, owned, duplicates, onClick }: CardTileProps) => {
           <span className="font-bold select-none">{duplicates}</span>
           
           <Button 
-            onClick={(e) => handleButtonClick(e, onClick)} 
+            onClick={(e) => handleButtonClick(e, onAdd)} 
             onPointerDown={(e) => e.stopPropagation()} // Blocks card long press initiation
             className="cursor-pointer" 
             variant="secondary"

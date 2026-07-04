@@ -1,35 +1,29 @@
 "use client";
 
-import { useState } from "react";
 import { GlobalProgress } from "../ui/GlobalProgress";
 import CollectionGrid from "../ui/CollectionGrid";
 import { Button } from "../ui/button";
-import collections from "@/lib/data/collections.json";
-import { useUser } from "@/hooks/use-user";
+import { useCollection } from "@/hooks/CollectionContext"; // ⚡ Import context
 
 export default function HomePage() {  
-    const [isCollectionsOpen, setIsCollectionsOpen] = useState(false);
-    const myCollections = collections.collections.map((index) => {return index.name}) ;
-    const matchAttax = myCollections[0];
+    // ⚡ Get active state and setter directly from your context provider
+    const { activeCollectionId, setActiveCollectionId } = useCollection();
 
     return (
         <div className="mt-10 w-full flex flex-col">
-            {!isCollectionsOpen ? (
-
-                        <div className="w-full mx-auto max-w-5xl p-4 md:p-8 cursor-pointer active:opacity-60 hover:opacity-80" onClick={() => setIsCollectionsOpen(true)}>
-                            <GlobalProgress />
-                        </div>
+            {!activeCollectionId ? (
+                // Sets the collection ID immediately on click
+                <GlobalProgress onSelectCollection={setActiveCollectionId} />
             ) : ( 
                 /* 🗺️ VIEW 2: The Core Card Grids */
                 <div className="px-8 space-y-4">
-                    {/* ⚡ FIXED: Correctly toggles back to dashboard selector view */}
-                    <Button variant="outline" onClick={() => setIsCollectionsOpen(false)}>
-                        ← Back
+                    {/* Clear the context value to go back home */}
+                    <Button className="px-2 py-1" variant="outline" onClick={() => setActiveCollectionId(null)}>
+                        ← <span className="px-1"></span> Home
                     </Button>
-
-                   
                     
-                    <CollectionGrid />
+                    {/* Pass the active id down to the grid */}
+                    <CollectionGrid collectionId={activeCollectionId} />
                 </div>
             )}
         </div>
