@@ -23,7 +23,6 @@ import { Checkbox } from "./checkbox";
 
 type ViewMode = "overview" | "group" | "search";
 
-<<<<<<< HEAD
 interface Group {
   subset: string;
   name: string;
@@ -36,12 +35,8 @@ interface CollectionGridProps {
 
 const CollectionGrid = ({ collectionId }: CollectionGridProps) => {
 
-=======
 
 const CollectionGrid = () => {
-  const { hasCard, getCardCount, allCards, addCard } = useCollection();
-  const { filteredCards, query, setQuery, setCollectionFilter, collectionFilter } = useCardSearch();
->>>>>>> 7b215ce74495393f6ac9a6ce561e133cff488902
   
   const { 
     hasCard, 
@@ -428,5 +423,6 @@ const nestedGroupedCards = useMemo(() => {
     </div>
   );
 };
+}
 
 export default CollectionGrid;
