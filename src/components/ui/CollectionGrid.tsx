@@ -35,8 +35,6 @@ interface CollectionGridProps {
 
 const CollectionGrid = ({ collectionId }: CollectionGridProps) => {
 
-
-const CollectionGrid = () => {
   
   const { 
     hasCard, 
@@ -423,6 +421,5 @@ const nestedGroupedCards = useMemo(() => {
     </div>
   );
 };
-}
 
 export default CollectionGrid;
