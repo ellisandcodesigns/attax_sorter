@@ -26,12 +26,8 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 
-interface collectionProp {
-    card: FlatCard;
-}
 
-
-const CollectionGrid = ({card}: collectionProp) => {
+const CollectionGrid = () => {
   const { hasCard, getCardCount, allCards, addCard } = useCollection();
   const { filteredCards, query, setQuery, setCollectionFilter, collectionFilter } = useCardSearch();
   
