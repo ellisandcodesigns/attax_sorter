@@ -1,14 +1,20 @@
 "use client";
 
 import { useState } from "react";
-import { Menu, X, LogOut, User } from "lucide-react";
+import { Menu, X, LogOut, User, ArrowLeft, Copy, Share } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useUser } from "@/hooks/use-user";
 import HomePage from "./pages/HomePage";
+import { useCollection } from "@/hooks/CollectionContext";
+import { SidebarInlineExport } from "./CollectionExporter";
+import { Dialog, DialogContent, DialogHeader, DialogTrigger } from "./ui/dialog";
 
 export default function SidebarApp({ children }: { children: React.ReactNode }) {
   const [open, setOpen] = useState(false);
   const { user, signOut } = useUser();
+  const { activeCollectionId, setActiveCollectionId } = useCollection();
+  const [openexport, setOpenExport] = useState(false);
+
 
   return (
     <div className="flex h-screen overflow-hidden">
@@ -29,14 +35,20 @@ export default function SidebarApp({ children }: { children: React.ReactNode }) 
         {/* HEADER */}
         <div className="p-4 border-b flex items-center justify-between">
           <h1 className="font-bold text-lg">Match Attax</h1>
-          <Button variant="ghost" size="icon" onClick={() => setOpen(false)}>
+          <Button variant="secondary" size="icon" onClick={() => setOpen(false)} className="bg-transparent">
             <X className="w-5 h-5" />
           </Button>
         </div>
 
+        <div className="py-5 px-3">
+         
+          <SidebarInlineExport/>
+          
+        </div>
+
 
         {/* BOTTOM PROFILE AREA */}
-        <div className="absolute bottom-0 w-full border-t p-4 space-y-2">
+        <div className="absolute bottom-0 w-full border-t p-6 space-y-4">
           <div className="flex items-center gap-2 text-sm w-full justify-between">
             <User className="w-4 h-4" />
             <span className="truncate">{user?.email || "Guest"}</span>
@@ -57,12 +69,23 @@ export default function SidebarApp({ children }: { children: React.ReactNode }) 
       <div className="flex-1 flex flex-col w-full">
         
         {/* TOP BAR */}
-        <header className="h-14 border-b flex items-center px-4">
-          <Button variant="outline" size="icon" onClick={() => setOpen(true)}>
-            <Menu className="w-5 h-5" />
-          </Button>
+        <header className="py-2 flex items-center justify-evenly gap-15 w-full px-4 border-b border-accent pb-5">
 
-          <h2 className="ml-3 font-semibold">Collection</h2>
+          {activeCollectionId === null ? (
+              <div>
+
+              </div>
+          ): (
+            <Button size="icon" variant="outline" onClick={() => setActiveCollectionId(null)}>
+            <ArrowLeft/>
+            </Button>
+          )} 
+
+          <h2 className="ml-3 font-semibold">Attax Collector</h2>
+
+          <Button className="bg-transparent py-5" variant="secondary" onClick={() => setOpen(true)}>
+            <Menu className="w-6! h-6!" />
+          </Button>
         </header>
 
         {/* PAGE CONTENT */}

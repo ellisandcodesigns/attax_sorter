@@ -40,6 +40,8 @@ interface CollectionStats {
 interface CollectionContextProps {
   activeCollectionId: string | null;
   setActiveCollectionId: (id: string | null) => void;
+  exportCollectionText: (type: "owned" | "duplicates") => string;
+  exportGroupedCollectionText: (type: "owned" | "duplicates") => string;
   
   // Dynamic metrics for the active collection view
   ownedUniqueCount: number;
@@ -263,6 +265,86 @@ export function CollectionProvider({ children }: { children: React.ReactNode }) 
     }
   };
 
+  const exportCollectionText = (type: "owned" | "duplicates"): string => {
+  // Use current view cards, or fallback to all global cards if no active ID
+  const targetCards = activeCollectionId ? currentCollectionCards : allCards;
+
+  return targetCards
+    .map((card) => {
+      const quantity = collectionMap[card.uid] ?? 0;
+      
+      if (type === "owned" && quantity > 0) {
+        // e.g., "Card #42 (x2)"
+        return `Card #${card.card_number || card.uid} (x${quantity})`;
+      } 
+      
+      if (type === "duplicates" && quantity > 1) {
+        // e.g., "Card #104 (x1 duplicate)"
+        return `Card #${card.card_number || card.uid} (x${quantity - 1})`;
+      }
+      
+      return null;
+    })
+    .filter(Boolean) // Filter out null lines
+    .join("\n");
+};
+
+const exportGroupedCollectionText = (type: "owned" | "duplicates"): string => {
+  // 1. Gather the cards in focus
+  const targetCards = activeCollectionId ? currentCollectionCards : allCards;
+
+  // 2. Build a structural nested tree: Group -> SubGroup -> Cards[]
+  // Adjust 'card.category' and 'card.team' keys to match your exact JSON properties
+  const structuralTree: Record<string, Record<string, FlatCard[]>> = {};
+
+  targetCards.forEach((card) => {
+    const quantity = collectionMap[card.uid] ?? 0;
+    
+    // Filter conditions based on requested export style
+    if (type === "owned" && quantity === 0) return;
+    if (type === "duplicates" && quantity <= 1) return;
+
+    // Fallback labels if fields are missing in data records
+    const mainGroup = card.subset || "Base Cards";
+    const subGroup = card.group || card.club || "General";
+
+    if (!structuralTree[mainGroup]) {
+      structuralTree[mainGroup] = {};
+    }
+    if (!structuralTree[mainGroup][subGroup]) {
+      structuralTree[mainGroup][subGroup] = [];
+    }
+
+    structuralTree[mainGroup][subGroup].push(card);
+  });
+
+  // 3. Compile the structural tree into a beautifully spaced string layout
+  const textLines: string[] = [];
+
+  Object.entries(structuralTree).forEach(([mainGroup, subGroups]) => {
+    textLines.push(`=== ${mainGroup.toUpperCase()} ===`);
+
+    Object.entries(subGroups).forEach(([subGroup, cards]) => {
+      textLines.push(`  [ ${subGroup} ]`);
+
+      cards.forEach((card) => {
+        const qty = collectionMap[card.uid] ?? 0;
+        const displayQty = type === "owned" ? qty : qty - 1;
+        const cardNameStr = card.name ? ` - ${card.name}` : "";
+        const cardNum = card.card_number || card.uid;
+
+        textLines.push(`    • Card #${cardNum}${cardNameStr} (x${displayQty})`);
+      });
+      textLines.push(""); // Spacer line after each subgroup
+    });
+  });
+
+  return textLines.join("\n").trim();
+};
+
+// Pass exportGroupedCollectionText down through your context provider value wrapper
+
+
   
 
   return (
@@ -277,6 +359,8 @@ export function CollectionProvider({ children }: { children: React.ReactNode }) 
       duplicateCount: activeStats.duplicateCount,
       currentCollectionCards,
       ownedCardList,
+      exportCollectionText,
+      exportGroupedCollectionText,
       getCollectionStats,
       getDuplicateCount,
       hasCard, 

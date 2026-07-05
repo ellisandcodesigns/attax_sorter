@@ -161,7 +161,7 @@ const nestedGroupedCards = useMemo(() => {
 
       {/* SEARCH BAR */}
       {activeView !== "group" && (
-        <div className="flex flex-col gap-4 justify-between items-start md:items-center border-b border-border py-4">
+        <div className="flex flex-col gap-4 justify-between items-start md:items-center border-b border-border py-4 relative">
 
             {/* TITLE */}
             <div className="flex flex-col gap-2 w-full">
@@ -172,16 +172,16 @@ const nestedGroupedCards = useMemo(() => {
                 Track owned cards, duplicates, and completion status.
             </p>
 
-            <div className="flex w-full justify-between py-5">
-              <div className="bg-secondary p-2 rounded-lg min-w-30 text-center flex flex-col">
+            <div className="flex w-full justify-between py-5 gap-2">
+              <div className="bg-secondary p-2 rounded-lg text-center flex flex-col w-full sm:p-4 md:p-6">
                 <div className="text-muted-foreground text-sm">Owned</div>
                 <div className="text-2xl text-accent-foreground">{ownedUniqueCount}</div>
               </div>
-              <div className="bg-secondary p-2 rounded-lg min-w-30 text-center flex flex-col">
+              <div className="bg-secondary p-2 rounded-lg w-full text-center flex flex-col sm:p-4 md:p-6">
                 <div className="text-muted-foreground text-sm">Need</div>
                 <div className="text-2xl text-accent-foreground">{totalCards - ownedUniqueCount}</div>
               </div>
-              <div className="bg-secondary p-2 rounded-lg min-w-30 text-center flex flex-col">
+              <div className="bg-secondary p-2 rounded-lg w-full text-center flex flex-col sm:p-4 md:p-6">
                 <div className="text-muted-foreground text-sm">Duplicates</div>
                 <div className="text-2xl text-accent-foreground">{duplicateCount}</div>
               </div>
@@ -266,7 +266,9 @@ const nestedGroupedCards = useMemo(() => {
         <>
           {filteredCards.length > 0 ? (
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+
               {filteredCards.map((card) => (
+
                 <CardTile
                   key={card.uid}
                   card={card}
@@ -275,6 +277,7 @@ const nestedGroupedCards = useMemo(() => {
                   onAdd={() => addCard(card.uid)}
                   onRemove={() => removeCard(card.uid)}
                 />
+
               ))}
             </div>
           ) : (
@@ -354,7 +357,7 @@ const nestedGroupedCards = useMemo(() => {
       {activeView === "overview" &&
         Object.entries(nestedGroupedCards).map(([subset, collections]) => (
           <section key={subset} className="space-y-4">
-            <h2 className="font-bold uppercase">{subset}</h2>
+            <h2 className="font-bold uppercase border-l-4 border-l-primary pl-5 my-6" id={subset}>{subset}</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {Object.entries(collections).map(([name, cards], idx) => {
@@ -376,7 +379,7 @@ const nestedGroupedCards = useMemo(() => {
                 return (
                   <Card
                     key={name}
-                    className="group cursor-pointer active:scale-[0.99] transition-all duration-200 relative shadow-sm flex flex-col justify-between overflow-hidden min-h-55 w-full"
+                    className="group cursor-pointer active:scale-[0.99] transition-all duration-200 relative shadow-sm flex flex-col justify-between overflow-hidden min-h-55 w-full p-1 gap-2"
                     onClick={() => openGroup(globalIndex)}
                   >
 
@@ -387,7 +390,7 @@ const nestedGroupedCards = useMemo(() => {
                     </div>
 
                 
-                    <CardHeader className="flex flex-col gap-3 space-y-0 p-5 w-full"> {/* Image Wrapper */} 
+                    <CardHeader className="flex flex-col gap-2 space-y-0 p-4 w-full"> {/* Image Wrapper */} 
                         
                         <div className="w-14 h-14 flex items-center justify-center relative bg-muted/30 rounded-lg p-1.5 border border-border/60 group-hover:scale-105 transition-transform duration-200"> 
                         {cards[0]?.clubLogo ? ( 
@@ -397,7 +400,7 @@ const nestedGroupedCards = useMemo(() => {
                             )} 
                         </div> 
 
-                        <CardTitle className="text-sm font-bold truncate group-hover:text-primary transition-colors flex justify-between w-full py-2"> 
+                        <CardTitle className="text-sm font-bold truncate group-hover:text-primary transition-colors flex gap-3 w-full pt-2 flex-col sm:flex-row sm:justify-between"> 
                         <div>{name}</div>
                           {tradeDuplicates > 0 && (
                             <div className="text-xs text-emerald-500 font-semibold">
@@ -408,7 +411,7 @@ const nestedGroupedCards = useMemo(() => {
 
                     </CardHeader>
 
-                    <CardContent className="w-full p-5 pt-0 mt-auto space-y-2">
+                    <CardContent className="w-full pb-2 pt-0 mt-auto space-y-2">
                       <div className="flex justify-between items-baseline text-xs text-muted-foreground"> <div> <span className="text-2xl font-extrabold text-foreground">{owned}</span> <span> / {total}</span> </div> <span className="font-semibold text-primary">{Math.round(percent)}%</span> </div>
                       <Progress value={percent} className="h-1.5 bg-muted w-full" />
                     </CardContent>

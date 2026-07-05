@@ -10,17 +10,15 @@ export default function HomePage() {
     const { activeCollectionId, setActiveCollectionId } = useCollection();
 
     return (
-        <div className="mt-10 w-full flex flex-col">
+        <div className="mt-4 w-full flex flex-col">
             {!activeCollectionId ? (
                 // Sets the collection ID immediately on click
                 <GlobalProgress onSelectCollection={setActiveCollectionId} />
             ) : ( 
                 /* 🗺️ VIEW 2: The Core Card Grids */
-                <div className="px-8 space-y-4">
+                <div className="px-2 space-y-1">
                     {/* Clear the context value to go back home */}
-                    <Button className="px-2 py-1" variant="outline" onClick={() => setActiveCollectionId(null)}>
-                        ← <span className="px-1"></span> Home
-                    </Button>
+                    
                     
                     {/* Pass the active id down to the grid */}
                     <CollectionGrid collectionId={activeCollectionId} />

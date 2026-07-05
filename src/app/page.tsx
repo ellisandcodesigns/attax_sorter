@@ -30,10 +30,9 @@ export default async function Home() {
   }
 
   return (
-    <main className='text-center flex flex-col h-screen justify-center'>
-      <div className='flex flex-col h-full justify-between py-50'>
+    <main className='text-center flex flex-col h-screen justify-center gap-10'>
         <div>
-          <h1 className='text-3xl font-bold mb-4'>Attax Collector</h1>
+          <h1 className='text-3xl font-bold mb-2'>Attax Collector</h1>
           <p className='text-sm font-normal text-muted-foreground'>Please log in to continue</p>
         </div>
       
@@ -41,7 +40,6 @@ export default async function Home() {
         <div>
           <GoogleSignInButton />
         </div>
-      </div>
     </main>
   )
 }
