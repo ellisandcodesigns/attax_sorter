@@ -275,12 +275,12 @@ export function CollectionProvider({ children }: { children: React.ReactNode }) 
       
       if (type === "owned" && quantity > 0) {
         // e.g., "Card #42 (x2)"
-        return `Card #${card.card_number || card.uid} (x${quantity})`;
+        return `${card.card_number} (x${quantity})`;
       } 
       
       if (type === "duplicates" && quantity > 1) {
         // e.g., "Card #104 (x1 duplicate)"
-        return `Card #${card.card_number || card.uid} (x${quantity - 1})`;
+        return `${card.card_number} (x${quantity - 1})`;
       }
       
       return null;
@@ -333,7 +333,7 @@ const exportGroupedCollectionText = (type: "owned" | "duplicates"): string => {
         const cardNameStr = card.name ? ` - ${card.name}` : "";
         const cardNum = card.card_number || card.uid;
 
-        textLines.push(`    • Card #${cardNum}${cardNameStr} (x${displayQty})`);
+        textLines.push(`    • ${cardNum} (x${displayQty})`);
       });
       textLines.push(""); // Spacer line after each subgroup
     });
