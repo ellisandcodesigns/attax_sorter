@@ -40,8 +40,7 @@ interface CollectionStats {
 interface CollectionContextProps {
   activeCollectionId: string | null;
   setActiveCollectionId: (id: string | null) => void;
-  exportCollectionText: (type: "owned" | "duplicates") => string;
-  exportGroupedCollectionText: (type: "owned" | "duplicates") => string;
+  exportGroupedCollectionText: (type: "owned" | "duplicates" | "unowned") => string;
   
   // Dynamic metrics for the active collection view
   ownedUniqueCount: number;
@@ -265,36 +264,11 @@ export function CollectionProvider({ children }: { children: React.ReactNode }) 
     }
   };
 
-  const exportCollectionText = (type: "owned" | "duplicates"): string => {
-  // Use current view cards, or fallback to all global cards if no active ID
-  const targetCards = activeCollectionId ? currentCollectionCards : allCards;
-
-  return targetCards
-    .map((card) => {
-      const quantity = collectionMap[card.uid] ?? 0;
-      
-      if (type === "owned" && quantity > 0) {
-        // e.g., "Card #42 (x2)"
-        return `${card.card_number} (x${quantity})`;
-      } 
-      
-      if (type === "duplicates" && quantity > 1) {
-        // e.g., "Card #104 (x1 duplicate)"
-        return `${card.card_number} (x${quantity - 1})`;
-      }
-      
-      return null;
-    })
-    .filter(Boolean) // Filter out null lines
-    .join("\n");
-};
-
-const exportGroupedCollectionText = (type: "owned" | "duplicates"): string => {
+const exportGroupedCollectionText = (type: "owned" | "duplicates" | "unowned"): string => {
   // 1. Gather the cards in focus
   const targetCards = activeCollectionId ? currentCollectionCards : allCards;
 
   // 2. Build a structural nested tree: Group -> SubGroup -> Cards[]
-  // Adjust 'card.category' and 'card.team' keys to match your exact JSON properties
   const structuralTree: Record<string, Record<string, FlatCard[]>> = {};
 
   targetCards.forEach((card) => {
@@ -303,10 +277,11 @@ const exportGroupedCollectionText = (type: "owned" | "duplicates"): string => {
     // Filter conditions based on requested export style
     if (type === "owned" && quantity === 0) return;
     if (type === "duplicates" && quantity <= 1) return;
+    if (type === "unowned" && quantity > 0) return; 
 
     // Fallback labels if fields are missing in data records
     const mainGroup = card.subset || "Base Cards";
-    const subGroup = card.group || card.club || "General";
+    const subGroup = card.club || "General";
 
     if (!structuralTree[mainGroup]) {
       structuralTree[mainGroup] = {};
@@ -318,29 +293,48 @@ const exportGroupedCollectionText = (type: "owned" | "duplicates"): string => {
     structuralTree[mainGroup][subGroup].push(card);
   });
 
-  // 3. Compile the structural tree into a beautifully spaced string layout
+  // 3. Compile the structural tree into a beautiful, highly scannable Markdown layout
   const textLines: string[] = [];
+  const headlineTitle = type === "owned" ? "OWNED INVENTORY LIST" : type === "duplicates" ? "DUPLICATES TRADE LIST": "CARDS I NEED";
+
+  textLines.push(`📦 CURRENT SELECTION (${headlineTitle})`);
+  textLines.push(""); // Initial spacer
 
   Object.entries(structuralTree).forEach(([mainGroup, subGroups]) => {
-    textLines.push(`=== ${mainGroup.toUpperCase()} ===`);
+    // Top subset header block
+    textLines.push(`━━━━━━━━━━━━━━━━━━━━━━━━━━`);
+    textLines.push(`🏆 Type: ${mainGroup}`);
+    textLines.push(`━━━━━━━━━━━━━━━━━━━━━━━━━━`);
 
     Object.entries(subGroups).forEach(([subGroup, cards]) => {
-      textLines.push(`  [ ${subGroup} ]`);
+      // Sub-heading details (e.g. Club or Theme Group)
+      textLines.push(`📁 ${subGroup}:`);
 
-      cards.forEach((card) => {
+      // Sort cards inside each team numerically before exporting them
+      const sortedCards = [...cards].sort((a, b) => Number(a.card_number) - Number(b.card_number));
+
+      sortedCards.forEach((card) => {
         const qty = collectionMap[card.uid] ?? 0;
-        const displayQty = type === "owned" ? qty : qty - 1;
-        const cardNameStr = card.name ? ` - ${card.name}` : "";
-        const cardNum = card.card_number || card.uid;
+        
+        // If viewing trades, show count available over the base 1 card entry
+       let qtyStr = "";
+        if (type === "owned") qtyStr = ` x${qty}`;
+        if (type === "duplicates") qtyStr = ` x${qty - 1}`;
+        // (For unowned list, qtyStr remains empty because you don't have any copies yet)
 
-        textLines.push(`    • ${cardNum} (x${displayQty})`);
+        const cardNum = card.card_number ? `#${String(card.card_number).padStart(3, "0")}` : `#${card.uid}`;
+        const clubContext = card.club && card.club !== subGroup ? ` (${card.club})` : "";
+
+
+        textLines.push(`  • ${cardNum} ${card.name || "Unknown Card"}${clubContext} x${qtyStr}`);
       });
-      textLines.push(""); // Spacer line after each subgroup
+      textLines.push(""); // Spacer line after each sub-group chunk finishes
     });
   });
 
   return textLines.join("\n").trim();
 };
+
 
 // Pass exportGroupedCollectionText down through your context provider value wrapper
 
@@ -359,7 +353,6 @@ const exportGroupedCollectionText = (type: "owned" | "duplicates"): string => {
       duplicateCount: activeStats.duplicateCount,
       currentCollectionCards,
       ownedCardList,
-      exportCollectionText,
       exportGroupedCollectionText,
       getCollectionStats,
       getDuplicateCount,

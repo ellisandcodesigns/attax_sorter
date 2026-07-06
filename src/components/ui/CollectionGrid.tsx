@@ -243,33 +243,35 @@ const nestedGroupedCards = useMemo(() => {
           </InputGroup>
         </div>
 
-            {/* DUPLICATES */}
-            <div className="w-full">
-            <Tabs 
-              value={filterStatus} 
-              onValueChange={(value) => setFilterStatus(value as CardFilterStatus)}
-              className="w-full"
-            >
-              <TabsList className="flex w-full items-center justify-start bg-transparent p-0 rounded-none h-auto gap-6 md:gap-8 overflow-x-auto scrollbar-none">
-                {/* Base Trigger Styles Helper Class */}
-                {[
-                  { id: "all", label: "All Cards" },
-                  { id: "owned", label: "Collected" },
-                  { id: "duplicates", label: "Duplicates" },
-                  { id: "unowned", label: "Missing" },
-                ].map((tab) => (
-                  <TabsTrigger
-                    key={tab.id}
-                    value={tab.id}
-                    className="bg-transparent border-t-0 border-x-0 border-b-4 border-transparent px-1 pb-3 pt-2 text-sm font-medium rounded-none shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:font-semibold hover:text-foreground/80 focus:ring-0 focus-visible:ring-0 focus-visible:outline-none"
-                  >
-                    {tab.label}
-                  </TabsTrigger>
-                ))}
-              </TabsList>
-            </Tabs>
+        {/* DUPLICATES & FILTER TABS */}
+        <div className="w-full">
+          <Tabs 
+            value={filterStatus} 
+            onValueChange={(value) => setFilterStatus(value as CardFilterStatus)}
+            className="w-full"
+          >
+            {/* ⚡ Mobile optimization: wrapped grid layout for small screens, switching to flex rows on desktop */}
+            <TabsList className="grid grid-cols-4 w-full md:flex md:w-auto md:items-center md:justify-start bg-transparent p-0 rounded-none h-auto gap-1 sm:gap-2 md:gap-8 border-b border-border/40">
+              {[
+                { id: "all", label: "All", desktopLabel: "All Cards" },
+                { id: "owned", label: "Owned", desktopLabel: "Collected" },
+                { id: "duplicates", label: "Dups", desktopLabel: "Duplicates" },
+                { id: "unowned", label: "Missing", desktopLabel: "Missing" },
+              ].map((tab) => (
+                <TabsTrigger
+                  key={tab.id}
+                  value={tab.id}
+                  className="bg-transparent border-t-0 border-x-0 border-b-2 sm:border-b-4 border-transparent px-0.5 sm:px-1 pb-2 sm:pb-3 pt-2 text-[11px] sm:text-xs md:text-sm font-medium rounded-none! shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:font-semibold hover:text-foreground/80 focus:ring-0 focus-visible:ring-0 focus-visible:outline-none text-center cursor-pointer"
+                >
+                  {/* ⚡ Responsive Labels: Short names on tiny phones, full descriptions on larger screens */}
+                  <span className="md:hidden">{tab.label}</span>
+                  <span className="hidden md:inline">{tab.desktopLabel}</span>
+                </TabsTrigger>
+              ))}
+            </TabsList>
+          </Tabs>
+        </div>
 
-            </div>
         </div>
         )}
 

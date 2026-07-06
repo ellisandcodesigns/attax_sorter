@@ -19,8 +19,11 @@ interface AuthContextType {
   loading: boolean;
   error: AuthError | null;
   role: string | null;
+  displayName: string;
+  updateProfileName: (name: string) => Promise<void>;
   signOut: () => Promise<void>; // ⚡ Expose clean signOut function
 }
+
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
@@ -33,6 +36,25 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   
   const supabase = createClient();
   const router = useRouter(); // ⚡ Use Next.js client router
+
+  const displayName = 
+  user?.user_metadata?.full_name || 
+  user?.user_metadata?.display_name ||  
+  user?.user_metadata?.name ||
+  user?.email?.split("@")[0] || 
+  "Collector Hero";
+
+  const updateProfileName = async (newName: string) => {
+  try {
+    const { data, error } = await supabase.auth.updateUser({
+      data: { full_name: newName } // Saves name directly to secure user_metadata dictionary
+    });
+    if (error) throw error;
+    if (data.user) setUser(data.user); // Instantly updates context state across whole app layout
+  } catch (err) {
+    console.error("Failed updating profile name:", err);
+  }
+};
 
   // ⚡ Fixed Sign Out: Completely client-safe
   const signOut = async () => {
@@ -88,7 +110,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   return React.createElement(
     AuthContext.Provider,
-    { value: { user, session, loading, error, role, signOut } },
+    { value: { user, session, loading, error, role, displayName, updateProfileName, signOut } },
     children
   );
 }
