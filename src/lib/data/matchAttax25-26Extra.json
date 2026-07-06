@@ -993,96 +993,6 @@
                 "club": "OL Lyonnes"
             },
             {
-                "id": 21,
-                "name": "Salma Paralluelo",
-                "card_number": 147,
-                "club": "FC Barcelona"
-            },
-            {
-                "id": 22,
-                "name": "Caroline Weir",
-                "card_number": 148,
-                "club": "Real Madrid CF"
-            },
-            {
-                "id": 23,
-                "name": "Sara Dabritz",
-                "card_number": 149,
-                "club": "Real Madrid CF"
-            },
-            {
-                "id": 24,
-                "name": "Signe Bruun",
-                "card_number": 150,
-                "club": "Real Madrid CF"
-            },
-            {
-                "id": 25,
-                "name": "Gio Garbelini",
-                "card_number": 151,
-                "club": "Atlético de Madrid"
-            },
-            {
-                "id": 26,
-                "name": "Giulia Gwinn",
-                "card_number": 152,
-                "club": "FC Bayern München"
-            },
-            {
-                "id": 27,
-                "name": "Lena Oberdorf",
-                "card_number": 153,
-                "club": "FC Bayern München"
-            },
-            {
-                "id": 28,
-                "name": "Kiara Buhl",
-                "card_number": 154,
-                "club": "FC Bayern München"
-            },
-            {
-                "id": 29,
-                "name": "Pernille Harder",
-                "card_number": 155,
-                "club": "FC Bayern München"
-            },
-            {
-                "id": 30,
-                "name": "Svenja Huth",
-                "card_number": 156,
-                "club": "VfL Wolfsburg"
-            },
-            {
-                "id": 31,
-                "name": "Alexandra Popp",
-                "card_number": 157,
-                "club": "VfL Wolfsburg"
-            },
-            {
-                "id": 32,
-                "name": "Lineth Beerensteyn",
-                "card_number": 158,
-                "club": "VfL Wolfsburg"
-            },
-            {
-                "id": 33,
-                "name": "Wendie Renard",
-                "card_number": 159,
-                "club": "OL Lyonnes"
-            },
-            {
-                "id": 34,
-                "name": "Ingrid Engen",
-                "card_number": 160,
-                "club": "OL Lyonnes"
-            },
-            {
-                "id": 35,
-                "name": "Kadidiatou Diani",
-                "card_number": 161,
-                "club": "OL Lyonnes"
-            },
-            {
                 "id": 36,
                 "name": "Melchie Dumornay",
                 "card_number": 162,
@@ -1312,7 +1222,6 @@
                 "club": "Bologna FC 1909"
             }
             ]
-
         },
         {
             "group_name": "Pitch Perfection",
@@ -1651,93 +1560,6 @@
             }
             ]
 
-        },
-        {
-            "group_name": "Queens of Europe",
-            "subset": "Special Cards",
-            "logo": "",
-            "cards": [
-                {
-                "id": 1,
-                "name": "Alessia Russo",
-                "card_number": "QE 1"
-                },
-                {
-                "id": 2,
-                "name": "Cristiana Girelli",
-                "card_number": "QE 2"
-                },
-                {
-                "id": 3,
-                "name": "Klara Bühl",
-                "card_number": "QE 3"
-                },
-                {
-                "id": 4,
-                "name": "Chole Kelly",
-                "card_number": "QE 4"
-                },
-                {
-                "id": 5,
-                "name": "Caroline Wier",
-                "card_number": "QE 5"
-                },
-                {
-                "id": 6,
-                "name": "Olivia Smith",
-                "card_number": "QE 6"
-                },
-                {
-                "id": 7,
-                "name": "Alexia Putellas",
-                "card_number": "QE 7"
-                },
-                {
-                "id": 8,
-                "name": "Melchie Dumornay",
-                "card_number": "QE 8"
-                },
-                {
-                "id": 9,
-                "name": "Aitana Bonmati",
-                "card_number": "QE 9"
-                },
-                {
-                "id": 10,
-                "name": "Hannah Hampton",
-                "card_number": "QE 10"
-                },
-                {
-                "id": 11,
-                "name": "Ewa Pajor",
-                "card_number": "QE 11"
-                },
-                {
-                "id": 12,
-                "name": "Clara Mateo",
-                "card_number": "QE 12"
-                },
-                {
-                "id": 13,
-                "name": "Jule Brand",
-                "card_number": "QE 13"
-                },
-                {
-                "id": 14,
-                "name": "Georgia Stanway",
-                "card_number": "QE 14"
-                },
-                {
-                "id": 15,
-                "name": "Alyssa Thompson",
-                "card_number": "QE 15"
-                },
-                {
-                "id": 16,
-                "name": "Ella Toone",
-                "card_number": "QE 16"
-                }
-            ]
         },
         {
             "group_name": "Hat-Trick Hero",
@@ -2647,6 +2469,42 @@
             }
             ]
         },
+         {
+            "group_name": "Pro-View Original",
+            "subset": "Special Cards",
+            "cards": [
+            {
+                "id": 1,
+                "name": "Eden Hazard",
+                "card_number": "",
+                "club": "Chelsea"
+            },
+            {
+                "id": 2,
+                "name": "Frank Lampard",
+                "card_number": "",
+                "club": "Chelsea"
+            },
+            {
+                "id": 3,
+                "name": "Lamine Yamal",
+                "card_number": "",
+                "club": "FC Barcelona"
+            },
+            {
+                "id": 4,
+                "name": "Gareth Bale",
+                "card_number": "",
+                "club": "Real Madrid CF"
+            },
+            {
+                "id": 5,
+                "name": "Giorgio Chiellini",
+                "card_number": "",
+                "club": "Juventus"
+            }
+            ]
+        },
         {
             "group_name": "Limited Edition - Blitz Ballers",
             "subset": "Special Cards",
@@ -2929,42 +2787,6 @@
             ]
         },
         {
-            "group_name": "Pro-View Original",
-            "subset": "Special Cards",
-            "cards": [
-            {
-                "id": 1,
-                "name": "Eden Hazard",
-                "card_number": "",
-                "club": "Chelsea"
-            },
-            {
-                "id": 2,
-                "name": "Frank Lampard",
-                "card_number": "",
-                "club": "Chelsea"
-            },
-            {
-                "id": 3,
-                "name": "Lamine Yamal",
-                "card_number": "",
-                "club": "FC Barcelona"
-            },
-            {
-                "id": 4,
-                "name": "Gareth Bale",
-                "card_number": "",
-                "club": "Real Madrid CF"
-            },
-            {
-                "id": 5,
-                "name": "Giorgio Chiellini",
-                "card_number": "",
-                "club": "Juventus"
-            }
-            ]
-        },
-        {
             "group_name": "UCL Decades Relic",
             "subset": "Special Cards",
             "cards": [
@@ -3234,89 +3056,90 @@
             }
             ]
         },
-        {
-            "group_name": "Star Ballers",
-            "subset":"Special Cards",
+          {
+            "group_name": "Queens of Europe",
+            "subset": "Special Cards",
+            "logo": "",
             "cards": [
                 {
                 "id": 1,
-                "name": "Raphinha",
-                "card_number": "SB 1"
+                "name": "Alessia Russo",
+                "card_number": "QE 1"
                 },
                 {
                 "id": 2,
-                "name": "Florian Wirtz",
-                "card_number": "SB 2"
+                "name": "Cristiana Girelli",
+                "card_number": "QE 2"
                 },
                 {
                 "id": 3,
-                "name": "Désiré Doué",
-                "card_number": "SB 3"
+                "name": "Klara Bühl",
+                "card_number": "QE 3"
                 },
                 {
                 "id": 4,
-                "name": "Jonathan Burkardt",
-                "card_number": "SB 4"
+                "name": "Chole Kelly",
+                "card_number": "QE 4"
                 },
                 {
                 "id": 5,
-                "name": "Jude Bellingham",
-                "card_number": "SB 5"
+                "name": "Caroline Wier",
+                "card_number": "QE 5"
                 },
                 {
                 "id": 6,
-                "name": "Alejandro Garnacho",
-                "card_number": "SB 6"
+                "name": "Olivia Smith",
+                "card_number": "QE 6"
                 },
                 {
                 "id": 7,
-                "name": "Jobe Bellingham",
-                "card_number": "SB 7"
+                "name": "Alexia Putellas",
+                "card_number": "QE 7"
                 },
                 {
                 "id": 8,
-                "name": " Nick Woltemade",
-                "card_number": "SB 8"
+                "name": "Melchie Dumornay",
+                "card_number": "QE 8"
                 },
                 {
                 "id": 9,
-                "name": "Eberechi Eze",
-                "card_number": "SB 9"
+                "name": "Aitana Bonmati",
+                "card_number": "QE 9"
                 },
                 {
                 "id": 10,
-                "name": "Gianluigi Donnarumma",
-                "card_number": "SB 10"
+                "name": "Hannah Hampton",
+                "card_number": "QE 10"
                 },
                 {
                 "id": 11,
-                "name": "Scott McTominay",
-                "card_number": "SB 11"
+                "name": "Ewa Pajor",
+                "card_number": "QE 11"
                 },
                 {
                 "id": 12,
-                "name": "Lautaro Martínez",
-                "card_number": "SB 12"
+                "name": "Clara Mateo",
+                "card_number": "QE 12"
                 },
                 {
                 "id": 13,
-                "name": "Illia Zabarnyi",
-                "card_number": "SB 13"
+                "name": "Jule Brand",
+                "card_number": "QE 13"
                 },
                 {
                 "id": 14,
-                "name": "Julián Álvarez",
-                "card_number": "SB 14"
+                "name": "Georgia Stanway",
+                "card_number": "QE 14"
                 },
                 {
                 "id": 15,
-                "name": "Xavi Simons",
-                "card_number": "SB 15"
+                "name": "Alyssa Thompson",
+                "card_number": "QE 15"
                 },
                 {
                 "id": 16,
-                "name": "Nicolas Jackson",
-                "card_number": "SB 16"
+                "name": "Ella Toone",
+                "card_number": "QE 16"
                 }
             ]
         }
