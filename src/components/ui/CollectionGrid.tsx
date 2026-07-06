@@ -12,6 +12,10 @@ import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { Badge } from "@/components/ui/badge";
 
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"; // Adjust import path to your project setup
+import { CardFilterStatus } from "@/hooks/useCardSearch"; // Path to your hook
+
+
 import collectionsData from "@/lib/data/collections.json";
 
 
@@ -53,8 +57,8 @@ const CollectionGrid = ({ collectionId }: CollectionGridProps) => {
     setQuery,
     setCollectionFilter,
     collectionFilter,
-    setDuplicatesOnly,
-    duplicatesOnly
+    filterStatus,
+    setFilterStatus
   } = useCardSearch(); 
 
 
@@ -63,7 +67,7 @@ const CollectionGrid = ({ collectionId }: CollectionGridProps) => {
   const [activeGroupIndex, setActiveGroupIndex] = useState(0);
 
   const isSearching =
-    query.trim().length > 0 || collectionFilter !== null || duplicatesOnly;
+    query.trim().length > 0 || collectionFilter !== null || filterStatus !== "all";
 
   // Automatically switch views based on search/filter activity
   useEffect(() => {
@@ -189,7 +193,7 @@ const nestedGroupedCards = useMemo(() => {
             </div>
 
             {/* SEARCH + FILTERS */}
-            <div className="w-full py-2">
+            <div className="w-full py-3 pb-4">
           <InputGroup className="w-full">
               <InputGroupInput
                 type="text"
@@ -241,23 +245,31 @@ const nestedGroupedCards = useMemo(() => {
 
             {/* DUPLICATES */}
             <div className="w-full">
-            <FieldGroup className="w-full">
-                <Field orientation="horizontal">
-                  <Checkbox
-                      checked={duplicatesOnly}
-                      onCheckedChange={(checked) =>
-                        setDuplicatesOnly(!!checked)
-                      }
-                      id="duplicates-checkbox"
-                  />
-                  <FieldLabel htmlFor="duplicates-checkbox" className="cursor-pointer">
-                      Show Duplicates Only
-                  </FieldLabel>
-                </Field>
-            </FieldGroup>
+            <Tabs 
+              value={filterStatus} 
+              onValueChange={(value) => setFilterStatus(value as CardFilterStatus)}
+              className="w-full"
+            >
+              <TabsList className="flex w-full items-center justify-start bg-transparent p-0 rounded-none h-auto gap-6 md:gap-8 overflow-x-auto scrollbar-none">
+                {/* Base Trigger Styles Helper Class */}
+                {[
+                  { id: "all", label: "All Cards" },
+                  { id: "owned", label: "Collected" },
+                  { id: "duplicates", label: "Duplicates" },
+                  { id: "unowned", label: "Missing" },
+                ].map((tab) => (
+                  <TabsTrigger
+                    key={tab.id}
+                    value={tab.id}
+                    className="bg-transparent border-t-0 border-x-0 border-b-4 border-transparent px-1 pb-3 pt-2 text-sm font-medium rounded-none shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:font-semibold hover:text-foreground/80 focus:ring-0 focus-visible:ring-0 focus-visible:outline-none"
+                  >
+                    {tab.label}
+                  </TabsTrigger>
+                ))}
+              </TabsList>
+            </Tabs>
+
             </div>
-
-
         </div>
         )}
 

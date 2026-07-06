@@ -3616,12 +3616,12 @@
             "cards": [
                 
                 {
-                "id": 2,
+                "id": 1,
                 "name": "Viktor Gyökeres",
                 "card_number": "ST EN"
                 },
                 {
-                "id": 3,
+                "id": 2,
                 "name": "Mariona Caldentey",
                 "card_number": "QE EN"
                 }
@@ -3682,7 +3682,122 @@
                 "card_number": "UCLW-ZZ"
             }
             ]
-        }
-       
+        },
+        {
+          "group_name": "Player-Worn Jersey Relic",
+          "subset":"Special Cards",
+          "cards": [
+          {
+          "id": 1,
+          "name": "Alessandro Bastoni",
+          "card_number": "JR-AB"
+          },
+          {
+          "id": 2,
+          "name": "Antoine Griezmann",
+          "card_number": "JR-AG"
+          },
+          {
+          "id": 3,
+          "name": "Bradley Barcola",
+          "card_number": "JR-BB"
+          },
+          {
+          "id": 4,
+          "name": "Bruno Guimarães",
+          "card_number": "JR-BG"
+          },
+          {
+          "id": 5,
+          "name": "Cody Gakpo",
+          "card_number": "JR-CG"
+          },
+          {
+          "id": 6,
+          "name": "Dani Olmo",
+          "card_number": "JR-DO"
+          },
+          {
+          "id": 7,
+          "name": "Dominic Solanke",
+          "card_number": "JR-DS"
+          },
+          {
+          "id": 8,
+          "name": "Enzo Fernádez",
+          "card_number": "JR-EF"
+          },
+          {
+          "id": 9,
+          "name": "Fermín López",
+          "card_number": "JR-FL"
+          },
+          {
+          "id": 10,
+          "name": "Geovany Quenda",
+          "card_number": "JR-GQ"
+          },
+          {
+          "id": 11,
+          "name": "Jérémy Doku",
+          "card_number": "JR-JD"
+          },
+          {
+          "id": 12,
+          "name": "Joshua Kimmich",
+          "card_number": "JR-JK"
+          },
+          {
+          "id": 13,
+          "name": "Levi Colwill",
+          "card_number": "JR-LC"
+          },
+          {
+          "id": 14,
+          "name": "Lamine Yamal",
+          "card_number": "JR-LY"
+          },
+          {
+          "id": 15,
+          "name": "Manuel Akanji",
+          "card_number": "JR-MA"
+          },
+          {
+          "id": 16,
+          "name": "Mohamed Salah",
+          "card_number": "JR-MS"
+          },
+          {
+          "id": 17,
+          "name": "Marcus Thuram",
+          "card_number": "JR-MT"
+          },
+          {
+          "id": 18,
+          "name": "Nico Schlotterbeck",
+          "card_number": "JR-NS"
+          },
+          {
+          "id": 19,
+          "name": "Sávio",
+          "card_number": "JR-SAV"
+          },
+          {
+          "id": 20,
+          "name": "Santiago Castro",
+          "card_number": "JR-SC"
+          },
+          {
+          "id": 21,
+          "name": "Son Heung-Min",
+          "card_number": "JR-SHM"
+          },
+          {
+          "id": 22,
+          "name": "Vitinha",
+          "card_number": "JR-VIT"
+          }
+        ]
+      }
     ]
 }

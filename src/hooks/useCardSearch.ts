@@ -4,6 +4,9 @@ import { useMemo, useState } from "react";
 import { useCollection } from "./CollectionContext";
 import { FlatCard } from "@/lib/types/cards";
 
+export type CardFilterStatus = "all" | "owned" | "duplicates" | "unowned";
+
+
 export const useCardSearch = () => {
   // ⚡ PULL DYNAMIC DATA: Get current cards, quantity map, and the active collection ID
   const { currentCollectionCards, getCardCount, activeCollectionId } = useCollection();
@@ -11,7 +14,8 @@ export const useCardSearch = () => {
   const [query, setQuery] = useState("");
   const [clubFilter, setClubFilter] = useState<string | null>(null);
   const [collectionFilter, setCollectionFilter] = useState<string | null>(null);
-  const [duplicatesOnly, setDuplicatesOnly] = useState(false);
+   const [filterStatus, setFilterStatus] = useState<CardFilterStatus>("all");
+
 
   // 1. FILTER RENDER LOOP
   const filteredCards: FlatCard[] = useMemo(() => {
@@ -27,9 +31,17 @@ export const useCardSearch = () => {
       cards = cards.filter((c) => c.subset === collectionFilter);
     }
 
-    // DUPLICATES FILTER
-    if (duplicatesOnly) {
+    // UNIFIED STATUS FILTER
+   if (filterStatus === "duplicates") {
       cards = cards.filter((c) => getCardCount(c.uid) > 1);
+    } else if (filterStatus === "owned") {
+      cards = cards.filter((c) => getCardCount(c.uid) > 0);
+    } else if (filterStatus === "unowned") {
+      // ⚡ FIX: A card is unowned if its count is falsy, 0, undefined, or missing
+      cards = cards.filter((c) => {
+        const count = getCardCount(c.uid);
+        return !count || Number(count) === 0;
+      });
     }
 
     // SEARCH QUERY STRINGS MATCHING
@@ -43,7 +55,7 @@ export const useCardSearch = () => {
     }
 
     return [...cards].sort((a, b) => Number(a.card_number) - Number(b.card_number));
-  }, [currentCollectionCards, query, clubFilter, collectionFilter, duplicatesOnly, getCardCount]);
+  }, [currentCollectionCards, query, clubFilter,filterStatus, collectionFilter, getCardCount]);
 
   // ⚡ 2. REFACTORED LOOKUP: Instant index performance instead of arrays parsing loops
   const getCard = (uid: string): FlatCard | undefined => {
@@ -60,8 +72,8 @@ export const useCardSearch = () => {
     setClubFilter,
     collectionFilter,
     setCollectionFilter,
-    duplicatesOnly,
-    setDuplicatesOnly,
+    filterStatus,
+    setFilterStatus,
     filteredCards,
     getCard,
   };

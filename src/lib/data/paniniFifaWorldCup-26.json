@@ -1,0 +1,960 @@
+{
+    "id": "panini-world-cup-26",
+    "groups": [
+        {
+            "group_name": "We Are Panini",
+            "subset": "Specials",
+            "logo": "",
+            "cards": [
+                {
+                    "id": 1,
+                    "name": "Panini Logo",
+                    "card_number": "00"
+                }
+            ]
+        },
+        {
+            "group_name": "Fifa World Cup 2026",
+            "subset": "Specials",
+            "logo": "",
+            "cards": [
+            {
+                "id": 1,
+                "name": "Official Emblem 1/2",
+                "card_number": "FWC-1"
+            },
+            {
+                "id": 2,
+                "name": "Official Emblem 2/2",
+                "card_number": "FWC-2"
+            },
+            {
+                "id": 3,
+                "name": "Official Mascots",
+                "card_number": "FWC-3"
+            },
+            {
+                "id": 4,
+                "name": "Official Slogan",
+                "card_number": "FWC-4"
+            },
+            {
+                "id": 5,
+                "name": "Official Ball",
+                "card_number": "FWC-5"
+            }
+            ]
+        },
+        {
+            "group_name": "Host Countries and Cities",
+            "subset": "Specials",
+            "logo": "",
+            "cards": [
+            {
+                "id": 1,
+                "name": "Canada (Host Country Emblem)",
+                "card_number": "FWC-6"
+            },
+            {
+                "id": 2,
+                "name": "Mexico (Host Country Emblem)",
+                "card_number": "FWC-7"
+            },
+            {
+                "id": 3,
+                "name": "USA (Host Country Emblem)",
+                "card_number": "FWC-8"
+            }
+            ]
+        },
+        {
+            "group_name": "Mexico",
+            "subset": "Group A",
+            "logo": "",
+            "cards": [
+        {
+            "id": 1,
+            "name": "Emblem",
+            "card_number": "MEX-1"
+        },
+        {
+            "id": 2,
+            "name": "Luis Malagón",
+            "card_number": "MEX-2"
+        },
+        {
+            "id": 3,
+            "name": "Johan Vasquez",
+            "card_number": "MEX-3"
+        },
+        {
+            "id": 4,
+            "name": "Jorge Sánchez",
+            "card_number": "MEX-4"
+        },
+        {
+            "id": 5,
+            "name": "Cesar Montes",
+            "card_number": "MEX-5"
+        },
+        {
+            "id": 6,
+            "name": "Jesus Gallardo",
+            "card_number": "MEX-6"
+        },
+        {
+            "id": 7,
+            "name": "Israel Reyes",
+            "card_number": "MEX-7"
+        },
+        {
+            "id": 8,
+            "name": "Diego Lainez",
+            "card_number": "MEX-8"
+        },
+        {
+            "id": 9,
+            "name": "Carlos Rodriguez",
+            "card_number": "MEX-9"
+        },
+        {
+            "id": 10,
+            "name": "Edson Alvarez",
+            "card_number": "MEX-10"
+        },
+        {
+            "id": 11,
+            "name": "Orbelin Pineda",
+            "card_number": "MEX-11"
+        },
+        {
+            "id": 12,
+            "name": "Marcel Ruiz",
+            "card_number": "MEX-12"
+        },
+        {
+            "id": 13,
+            "name": "Team Photo",
+            "card_number": "MEX-13"
+        },
+        {
+            "id": 14,
+            "name": "Érick Sánchez",
+            "card_number": "MEX-14"
+        },
+        {
+            "id": 15,
+            "name": "Hirving Lozano",
+            "card_number": "MEX-15"
+        },
+        {
+            "id": 16,
+            "name": "Santiago Giménez",
+            "card_number": "MEX-16"
+        },
+        {
+            "id": 17,
+            "name": "Raúl Jiménez",
+            "card_number": "MEX-17"
+        },
+        {
+            "id": 18,
+            "name": "Alexis Vega",
+            "card_number": "MEX-18"
+        },
+        {
+            "id": 19,
+            "name": "Roberto Alvarado",
+            "card_number": "MEX-19"
+        },
+        {
+            "id": 20,
+            "name": "Cesar Huerta",
+            "card_number": "MEX-20"
+        }
+        ]
+        },
+        {
+            "group_name": "South Africa",
+            "subset": "Group A",
+            "logo": "",
+            "cards": [
+            {
+                "id": 1,
+                "name": "Emblem",
+                "card_number": "RSA-1"
+            },
+            {
+                "id": 2,
+                "name": "Ronwen Williams",
+                "card_number": "RSA-2"
+            },
+            {
+                "id": 3,
+                "name": "Sipho Chaine",
+                "card_number": "RSA-3"
+            },
+            {
+                "id": 4,
+                "name": "Aubrey Modiba",
+                "card_number": "RSA-4"
+            },
+            {
+                "id": 5,
+                "name": "Samukele Kabini",
+                "card_number": "RSA-5"
+            },
+            {
+                "id": 6,
+                "name": "Mbekezeli Mbokazi",
+                "card_number": "RSA-6"
+            },
+            {
+                "id": 7,
+                "name": "Khulumani Ndamane",
+                "card_number": "RSA-7"
+            },
+            {
+                "id": 8,
+                "name": "Siyabonga Ngezana",
+                "card_number": "RSA-8"
+            },
+            {
+                "id": 9,
+                "name": "Khuliso Mudau",
+                "card_number": "RSA-9"
+            },
+            {
+                "id": 10,
+                "name": "Nkosinathi Sibisi",
+                "card_number": "RSA-10"
+            },
+            {
+                "id": 11,
+                "name": "Teboho Mokoena",
+                "card_number": "RSA-11"
+            },
+            {
+                "id": 12,
+                "name": "Thalente Mbatha",
+                "card_number": "RSA-12"
+            },
+            {
+                "id": 13,
+                "name": "Team Photo",
+                "card_number": "RSA-13"
+            },
+            {
+                "id": 14,
+                "name": "Bathasi Aubaas",
+                "card_number": "RSA-14"
+            },
+            {
+                "id": 15,
+                "name": "Yaya Sithole",
+                "card_number": "RSA-15"
+            },
+            {
+                "id": 16,
+                "name": "Sipho Mbule",
+                "card_number": "RSA-16"
+            },
+            {
+                "id": 17,
+                "name": "Lyle Foster",
+                "card_number": "RSA-17"
+            },
+            {
+                "id": 18,
+                "name": "Iqraam Rayners",
+                "card_number": "RSA-18"
+            },
+            {
+                "id": 19,
+                "name": "Mohau Nkota",
+                "card_number": "RSA-19"
+            },
+            {
+                "id": 20,
+                "name": "Oswin Appollis",
+                "card_number": "RSA-20"
+            }
+            ]
+
+        },
+        {
+            "group_name": "South Korea",
+            "subset": "Group A",
+            "logo": "",
+            "cards": [
+            {
+                "id": 1,
+                "name": "Emblem",
+                "card_number": "KOR-1"
+            },
+            {
+                "id": 2,
+                "name": "Hyeon-woo Jo",
+                "card_number": "KOR-2"
+            },
+            {
+                "id": 3,
+                "name": "Seung-Gyu Kim",
+                "card_number": "KOR-3"
+            },
+            {
+                "id": 4,
+                "name": "Min-jae Kim",
+                "card_number": "KOR-4"
+            },
+            {
+                "id": 5,
+                "name": "Yu-min Cho",
+                "card_number": "KOR-5"
+            },
+            {
+                "id": 6,
+                "name": "Young-woo Seol",
+                "card_number": "KOR-6"
+            },
+            {
+                "id": 7,
+                "name": "Han-beom Lee",
+                "card_number": "KOR-7"
+            },
+            {
+                "id": 8,
+                "name": "Tae-seok Lee",
+                "card_number": "KOR-8"
+            },
+            {
+                "id": 9,
+                "name": "Myung-jae Lee",
+                "card_number": "KOR-9"
+            },
+            {
+                "id": 10,
+                "name": "Jae-sung Lee",
+                "card_number": "KOR-10"
+            },
+            {
+                "id": 11,
+                "name": "In-beom Hwang",
+                "card_number": "KOR-11"
+            },
+            {
+                "id": 12,
+                "name": "Kang-in Lee",
+                "card_number": "KOR-12"
+            },
+            {
+                "id": 13,
+                "name": "Team Photo",
+                "card_number": "KOR-13"
+            },
+            {
+                "id": 14,
+                "name": "Seung-ho Paik",
+                "card_number": "KOR-14"
+            },
+            {
+                "id": 15,
+                "name": "Jens Castrop",
+                "card_number": "KOR-15"
+            },
+            {
+                "id": 16,
+                "name": "Dongg-yeong Lee",
+                "card_number": "KOR-16"
+            },
+            {
+                "id": 17,
+                "name": "Gue-sung Cho",
+                "card_number": "KOR-17"
+            },
+            {
+                "id": 18,
+                "name": "Heung-min Son",
+                "card_number": "KOR-18"
+            },
+            {
+                "id": 19,
+                "name": "Hee-chan Hwang",
+                "card_number": "KOR-19"
+            },
+            {
+                "id": 20,
+                "name": "Hyeon-Gyu Oh",
+                "card_number": "KOR-20"
+            }
+            ]
+        },
+        {
+            "group_name": "Czech Replublic",
+            "subset": "Group A",
+            "logo": "",
+            "cards": [
+            {
+                "id": 1,
+                "name": "Emblem",
+                "card_number": "CZE-1"
+            },
+            {
+                "id": 2,
+                "name": "Matej Kovar",
+                "card_number": "CZE-2"
+            },
+            {
+                "id": 3,
+                "name": "Jindrich Stanek",
+                "card_number": "CZE-3"
+            },
+            {
+                "id": 4,
+                "name": "Ladislav Krejci",
+                "card_number": "CZE-4"
+            },
+            {
+                "id": 5,
+                "name": "Vladimir Coufal",
+                "card_number": "CZE-5"
+            },
+            {
+                "id": 6,
+                "name": "Jaroslav Zeleny",
+                "card_number": "CZE-6"
+            },
+            {
+                "id": 7,
+                "name": "Tomas Holes",
+                "card_number": "CZE-7"
+            },
+            {
+                "id": 8,
+                "name": "David Zima",
+                "card_number": "CZE-8"
+            },
+            {
+                "id": 9,
+                "name": "Michal Sadilek",
+                "card_number": "CZE-9"
+            },
+            {
+                "id": 10,
+                "name": "Lukas Provod",
+                "card_number": "CZE-10"
+            },
+            {
+                "id": 11,
+                "name": "Lukas Cerv",
+                "card_number": "CZE-11"
+            },
+            {
+                "id": 12,
+                "name": "Tomas Soucek",
+                "card_number": "CZE-12"
+            },
+            {
+                "id": 13,
+                "name": "Team Photo",
+                "card_number": "CZE-13"
+            },
+            {
+                "id": 14,
+                "name": "Pavel Sulc",
+                "card_number": "CZE-14"
+            },
+            {
+                "id": 15,
+                "name": "Matej Vydra",
+                "card_number": "CZE-15"
+            },
+            {
+                "id": 16,
+                "name": "Vasil Kusej",
+                "card_number": "CZE-16"
+            },
+            {
+                "id": 17,
+                "name": "Tomas Chory",
+                "card_number": "CZE-17"
+            },
+            {
+                "id": 18,
+                "name": "Vacilav Cerny",
+                "card_number": "CZE-18"
+            },
+            {
+                "id": 19,
+                "name": "Adam Hlozek",
+                "card_number": "CZE-19"
+            },
+            {
+                "id": 20,
+                "name": "Patrik Schick",
+                "card_number": "CZE-20"
+            }
+            ]
+        },
+        {
+            "group_name": "Switzerland",
+            "subset": "Group B",
+            "logo": "",
+            "cards": [
+            {
+                "id": 1,
+                "name": "Emblem",
+                "card_number": "SUI-1"
+            },
+            {
+                "id": 2,
+                "name": "Gregor Kobel",
+                "card_number": "SUI-2"
+            },
+            {
+                "id": 3,
+                "name": "Yvon Mvogo",
+                "card_number": "SUI-3"
+            },
+            {
+                "id": 4,
+                "name": "Manuel Akanji",
+                "card_number": "SUI-4"
+            },
+            {
+                "id": 5,
+                "name": "Ricardo Rodriguez",
+                "card_number": "SUI-5"
+            },
+            {
+                "id": 6,
+                "name": "Nico Elvedi",
+                "card_number": "SUI-6"
+            },
+            {
+                "id": 7,
+                "name": "Aurèle Amenda",
+                "card_number": "SUI-7"
+            },
+            {
+                "id": 8,
+                "name": "Silvan Widmer",
+                "card_number": "SUI-8"
+            },
+            {
+                "id": 9,
+                "name": "Granit Xhaka",
+                "card_number": "SUI-9"
+            },
+            {
+                "id": 10,
+                "name": "Denis Zakaria",
+                "card_number": "SUI-10"
+            },
+            {
+                "id": 11,
+                "name": "Remo Freuler",
+                "card_number": "SUI-11"
+            },
+            {
+                "id": 12,
+                "name": "Fabian Rieder",
+                "card_number": "SUI-12"
+            },
+            {
+                "id": 13,
+                "name": "Team Photo",
+                "card_number": "SUI-13"
+            },
+            {
+                "id": 14,
+                "name": "Ardon Jashari",
+                "card_number": "SUI-14"
+            },
+            {
+                "id": 15,
+                "name": "Johan Manzambi",
+                "card_number": "SUI-15"
+            },
+            {
+                "id": 16,
+                "name": "Michel Aebischer",
+                "card_number": "SUI-16"
+            },
+            {
+                "id": 17,
+                "name": "Breel Embolo",
+                "card_number": "SUI-17"
+            },
+            {
+                "id": 18,
+                "name": "Ruben Vargas",
+                "card_number": "SUI-18"
+            },
+            {
+                "id": 19,
+                "name": "Dan Ndoye",
+                "card_number": "SUI-19"
+            },
+            {
+                "id": 20,
+                "name": "Zeki Amdouni",
+                "card_number": "SUI-20"
+            }
+            ]
+
+        },
+        {
+            "group_name": "Canada",
+            "subset": "Group B",
+            "logo": "",
+            "cards": [
+
+            ]
+        },
+        {
+            "group_name": "Bosnia",
+            "subset": "Group B",
+            "logo": "",
+            "cards": [
+
+            ]
+        },
+        {
+            "group_name": "Qatar",
+            "subset": "Group B",
+            "logo": "",
+            "cards": [
+
+            ]
+        },
+        {
+            "group_name": "Brazil",
+            "subset": "Group C",
+            "logo": "",
+            "cards": [
+
+            ]
+        },
+        {
+            "group_name": "Morocco",
+            "subset": "Group C",
+            "logo": "",
+            "cards": [
+
+            ]
+        },
+        {
+            "group_name": "Scotland",
+            "subset": "Group C",
+            "logo": "",
+            "cards": [
+
+            ]
+        },
+        {
+            "group_name": "Haiti",
+            "subset": "Group C",
+            "logo": "",
+            "cards": [
+
+            ]
+        },
+        {
+            "group_name": "United States",
+            "subset": "Group D",
+            "logo": "",
+            "cards": [
+
+            ]
+        },
+        {
+            "group_name": "Australia",
+            "subset": "Group D",
+            "logo": "",
+            "cards": [
+
+            ]
+        },
+        {
+            "group_name": "Paraguay",
+            "subset": "Group D",
+            "logo": "",
+            "cards": [
+
+            ]
+        },
+        {
+            "group_name": "Turkey",
+            "subset": "Group D",
+            "logo": "",
+            "cards": [
+
+            ]
+        },
+        {
+            "group_name": "Germany",
+            "subset": "Group E",
+            "logo": "",
+            "cards": [
+
+            ]
+        },
+        {
+            "group_name": "Ivory Coast",
+            "subset": "Group E",
+            "logo": "",
+            "cards": [
+
+            ]
+        },
+        {
+            "group_name": "Ecuador",
+            "subset": "Group E",
+            "logo": "",
+            "cards": [
+
+            ]
+        },
+        {
+            "group_name": "Curaçoa",
+            "subset": "Group E",
+            "logo": "",
+            "cards": [
+
+            ]
+        },
+        {
+            "group_name": "Netherlands",
+            "subset": "Group F",
+            "logo": "",
+            "cards": [
+
+            ]
+        },
+        {
+            "group_name": "Japan",
+            "subset": "Group F",
+            "logo": "",
+            "cards": [
+
+            ]
+        },
+        {
+            "group_name": "Sweden",
+            "subset": "Group F",
+            "logo": "",
+            "cards": [
+
+            ]
+        },
+        {
+            "group_name": "Tunisia",
+            "subset": "Group F",
+            "logo": "",
+            "cards": [
+
+            ]
+        },
+        {
+            "group_name": "Belgium",
+            "subset": "Group G",
+            "logo": "",
+            "cards": [
+
+            ]
+        },
+        {
+            "group_name": "Egypt",
+            "subset": "Group G",
+            "logo": "",
+            "cards": [
+
+            ]
+        },
+        {
+            "group_name": "Iran",
+            "subset": "Group G",
+            "logo": "",
+            "cards": [
+
+            ]
+        },
+        {
+            "group_name": "New Zealand",
+            "subset": "Group G",
+            "logo": "",
+            "cards": [
+
+            ]
+        },
+        {
+            "group_name": "Spain",
+            "subset": "Group H",
+            "logo": "",
+            "cards": [
+
+            ]
+        },
+        {
+            "group_name": "Cape Verde",
+            "subset": "Group H",
+            "logo": "",
+            "cards": [
+
+            ]
+        },
+        {
+            "group_name": "Uruguay",
+            "subset": "Group H",
+            "logo": "",
+            "cards": [
+
+            ]
+        },
+        {
+            "group_name": "Saudi Arabia",
+            "subset": "Group H",
+            "logo": "",
+            "cards": [
+
+            ]
+        },
+        {
+            "group_name": "France",
+            "subset": "Group I",
+            "logo": "",
+            "cards": [
+
+            ]
+        },
+        {
+            "group_name": "Norway",
+            "subset": "Group I",
+            "logo": "",
+            "cards": [
+
+            ]
+        },
+        {
+            "group_name": "Senegal",
+            "subset": "Group I",
+            "logo": "",
+            "cards": [
+
+            ]
+        },
+        {
+            "group_name": "Senegal",
+            "subset": "Group I",
+            "logo": "",
+            "cards": [
+
+            ]
+        },
+        {
+            "group_name": "Iraq",
+            "subset": "Group I",
+            "logo": "",
+            "cards": [
+
+            ]
+        },
+        {
+            "group_name": "Argentina",
+            "subset": "Group J",
+            "logo": "",
+            "cards": [
+
+            ]
+        },
+        {
+            "group_name": "austria",
+            "subset": "Group J",
+            "logo": "",
+            "cards": [
+
+            ]
+        },
+        {
+            "group_name": "Algeria",
+            "subset": "Group J",
+            "logo": "",
+            "cards": [
+
+            ]
+        },
+        {
+            "group_name": "Jordan",
+            "subset": "Group J",
+            "logo": "",
+            "cards": [
+
+            ]
+        },
+        {
+            "group_name": "Colombia",
+            "subset": "Group K",
+            "logo": "",
+            "cards": [
+
+            ]
+        },
+        {
+            "group_name": "Portugal",
+            "subset": "Group K",
+            "logo": "",
+            "cards": [
+
+            ]
+        },
+        {
+            "group_name": "Congo DR",
+            "subset": "Group K",
+            "logo": "",
+            "cards": [
+
+            ]
+        },
+        {
+            "group_name": "Uzbekistan",
+            "subset": "Group K",
+            "logo": "",
+            "cards": [
+
+            ]
+        },
+        {
+            "group_name": "England",
+            "subset": "Group L",
+            "logo": "",
+            "cards": [
+
+            ]
+        },
+        {
+            "group_name": "Croatia",
+            "subset": "Group L",
+            "logo": "",
+            "cards": [
+
+            ]
+        },
+        {
+            "group_name": "Ghana",
+            "subset": "Group L",
+            "logo": "",
+            "cards": [
+
+            ]
+        },
+        {
+            "group_name": "Panama",
+            "subset": "Group L",
+            "logo": "",
+            "cards": [
+
+            ]
+        }
+    ]
+}
